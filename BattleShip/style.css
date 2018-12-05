@@ -1,0 +1,87 @@
+#controls{
+/*position:absolute;*/
+height:3em;
+top:0em;
+width:98%;
+}
+@media print
+{
+	#controls{display:none;}
+}
+#content > table {
+	width: 100%;
+}
+#content > table > tr > td {
+	width: 25%;
+	text-align: center;
+}
+#content > table > tr {
+	margin-bottom:1em;
+}
+tr.title td {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.gameNo {
+    max-width: 40em;
+    padding: 0;
+    overflow-x: hidden;
+}
+.gameNo:after {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content: "___________________________________";
+}
+.gameNo span:first-child {
+    padding-right: 0.33em;
+    background: white;
+}
+.board > table, #ledger table {
+	margin: auto;
+}
+
+.board table {
+	border-collapse: collapse;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.board table thead tr th, .board table tbody tr th {
+	border: 1px solid black;
+}
+.board table tbody tr td {
+	border: 1px dashed black ;
+	width: 1em;
+}
+
+.ledger table {
+	border-collapse: collapse;
+	display:inherit;
+}
+.ledger table thead tr th, #ledger table thead tr td{
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+.ledger table thead tr td {
+	border-bottom: 1px solid black;
+}
+.ledger table tbody tr th {
+	text-align: right;
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+}
+.ledger table tbody tr td:nth-child(2n){
+	border-right:1px dashed black;
+	width:1em;
+}
+.ledger table tbody tr td:nth-child(2n+1){
+	border-right:1px solid black;
+	width:1em;
+}
+.ledger table tbody tr td{
+	border-bottom: 1px solid black;
+}

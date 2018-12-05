@@ -1,0 +1,129 @@
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet" />
+		<script src="ship.js"></script>
+		<style>
+			@media screen
+			{
+				#content{
+				/*about the page width http://stackoverflow.com/questions/320357/safe-width-in-pixel-for-printing-web-pages*/
+					width: 685pt;
+					height: 511pt;
+					margin: auto;
+					/*overflow:hidden;*/
+					border: 1px dashed green;
+				}
+			}
+			td.boards{ vertical-align: top; }
+			.gameNo{
+				margin:0.5em;
+			}
+		</style>
+		<script>
+		window.addEventListener("load", generateBoards);
+		function generateBoards(){
+			generateBoard("content1");
+			generateLedger(0);
+			generateLedger(1);
+			generateLedger(2);
+			generateLedger(3);
+			generateBoard("content2");
+			generateBoard("content3");
+			generateLedger(4);
+			generateLedger(5);
+			generateLedger(6);
+			generateLedger(7);
+			generateBoard("content4");
+		}
+		
+		</script>
+	</head>
+	<body>
+	<div id="controls"></div>
+	<div id="content">
+		<!--	<h2>Title</h2>
+		</div>-->
+		<table>
+		<tr>
+		<td id="content1" class="boards">
+			
+		</td>
+		<td id="ledger1" class="ledger">
+			<table>
+				<thead>
+					<tr><td>Turn</td><th colspan=2>P1</th><th colspan=2>P2</th></tr>
+				</thead>
+				<tbody id="ledgerBody0">
+				</tbody>
+			</table>
+			<table>
+				<thead>
+					<tr><td>Turn</td><th colspan=2>P1</th><th colspan=2>P2</th></tr>
+				</thead>
+				<tbody id="ledgerBody1">
+				</tbody>
+			</table>
+			<table>
+				<thead>
+					<tr><td>Turn</td><th colspan=2>P1</th><th colspan=2>P2</th></tr>
+				</thead>
+				<tbody id="ledgerBody2">
+				</tbody>
+			</table>
+			<table>
+				<thead>
+					<tr><td>Turn</td><th colspan=2>P1</th><th colspan=2>P2</th></tr>
+				</thead>
+				<tbody id="ledgerBody3">
+				</tbody>
+			</table>
+		</td>
+		
+		<td id="content2" class="boards">
+			
+		</td>
+		</tr>
+		<tr class="title"><td>P1</td><td>Ledger</td><td>P2</td></tr>
+		<tr>
+		<td id="content3" class="boards">
+			
+		</td>
+		<td id="ledger2" class="ledger">
+			<table>
+				<thead>
+					<tr><td>Turn</td><th colspan=2>P1</th><th colspan=2>P2</th></tr>
+				</thead>
+				<tbody id="ledgerBody4">
+				</tbody>
+			</table>
+			<table>
+				<thead>
+					<tr><td>Turn</td><th colspan=2>P1</th><th colspan=2>P2</th></tr>
+				</thead>
+				<tbody id="ledgerBody5">
+				</tbody>
+			</table>
+			<table>
+				<thead>
+					<tr><td>Turn</td><th colspan=2>P1</th><th colspan=2>P2</th></tr>
+				</thead>
+				<tbody id="ledgerBody6">
+				</tbody>
+			</table>
+			<table>
+				<thead>
+					<tr><td>Turn</td><th colspan=2>P1</th><th colspan=2>P2</th></tr>
+				</thead>
+				<tbody id="ledgerBody7">
+				</tbody>
+			</table>
+		</td>
+		
+		<td id="content4" class="boards">
+			
+		</td>
+		</tr>
+		</table>
+		</div>
+	</body>
+</html>
