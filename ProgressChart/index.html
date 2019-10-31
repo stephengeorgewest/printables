@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>Skylanders Sticker Chart</title>
+<style type="text/css">
+@font-face{font-family:skylanders;src: url(./pincoyablack.otf);}
+body{
+	text-align:center;
+	font-family:cursive;
+	}
+img{
+	float: right;
+	height: 15em;
+}
+h2{font-size:2em;margin-top:0em;margin-bottom:0em;}
+h2 span
+{
+display:none;
+clear:left;
+font-family:skylanders;
+}
+h2 img
+{
+	height:1.5em;
+	/*display:inline;*/
+	float:inherit;
+	 -webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+	/*margin-bottom:-2em;*/
+}
+h2:last-child{margin-top:1em;margin-bottom:1em;font-size:3em;}
+table{
+	padding-top:.025em;
+	clear: both;
+	border-collapse: collapse;
+	margin:auto;
+	/*margin-top:1em;*/
+	}
+
+table tr td {
+	font-size:4em;
+	color:lightgray;
+	width:2em;
+	height:2em;
+	border:0.05em dashed #ccc;
+	vertical-align:middle;
+	text-align:center;
+}
+#controls{
+/*position:absolute;*/
+height:3em;
+top:0em;
+width:98%;
+}
+@media print
+{
+	#controls{display:none;}
+}
+@media screen
+{
+	#content{
+	width: 511pt;
+/*about the page width http://stackoverflow.com/questions/320357/safe-width-in-pixel-for-printing-web-pages*/
+	height: 685pt;
+	margin: auto;
+	/*overflow:hidden;*/
+	border: 1px dashed green;}
+}
+</style>
+
+<script type="text/javascript">
+var images = [
+/*"Portal.png",
+"Bash.jpg",
+"Camo.jpg",
+"Cynder.png",
+"Slam Bam.png",
+"Wrecking Ball.png",
+"Eruptor.jpg",
+"Trigger Happy Giants.jpg",
+"Drobot.jpg",
+"Drill Sergeant.jpg",
+"Sonic Boom.png",
+"Whirlwind.jpg",
+"Double Trouble.jpg",
+"skylandersspyrosadventure_wii.jpg"
+"Trigger Happy.jpg",
+"Flame Slinger.png",
+"Gill Grunt.jpg",
+"Sunburn.jpg",
+"Spyro.jpg",
+"Terrafin.jpg",
+"Stump Smash.jpg",
+*/
+    /*cc0 images from publicdomainvectors.org */
+    "chokolate_bw.svg",
+    "CLIP-IS-A-BRICK_SW-MINI_IMPERIAL-SHUTTLE.svg",
+    "rubik_3D.svg",
+    "Train-2.svg",
+    "toy-airplane-paper.svg"
+];
+function change_image(image)
+{
+	document.getElementById("SkylanderImg").src='images/'+image;
+	document.getElementById("SkylanderImg").alt=image.split('.')[0];
+	document.getElementById("SkylanderImg").title=image.split('.')[0];
+}
+function load_image_list()
+{
+	var img_list=document.getElementById("ImageList");
+	var initial = Math.floor(Math.random()*images.length);
+	for(image=0; image<images.length; image++ )
+	{
+		var opt = document.createElement("option");
+		opt.value=images[image];
+		opt.textContent=images[image].split('.')[0];
+		if(image==initial)
+		{
+			opt.selected="selected";
+			change_image(images[image]);
+		}
+		img_list.appendChild(opt);
+	}
+}
+function make_table()
+{
+	var width= document.getElementsByName("width")[0].value;
+	var height= document.getElementsByName("height")[0].value;
+	var free = document.getElementsByName("free")[0].value;
+	var replace = document.getElementsByName("replace")[0].checked;
+	var thistable=document.getElementById("grid");
+	thistable.removeChild(thistable.firstElementChild);
+	
+	thistable.appendChild(document.createElement("tbody"));
+	for(var i=0; i<height; i++)
+	{
+		thistr=thistable.firstElementChild.appendChild(document.createElement("tr"));
+		for(var j=0; j<width; j++)
+		{
+			thistd = document.createElement("td");
+			var this_num=i*width+j+1;
+			///thistd.innertext=this_num+this_num%free;
+			if(free >1)
+			{	if(this_num%free==0)
+					thistd.innerText="free";
+				else
+					if(replace)
+						thistd.innerText=this_num;
+					else
+						thistd.innerText=this_num-Math.floor(this_num/free);
+			}
+			else
+				thistd.innerText=this_num;
+			thistr.appendChild(thistd);
+		}
+	}
+}
+function add_event_listeners()
+{
+document.getElementById("size_slider").addEventListener("change",update_preview_size);
+document.getElementById("size_slider").addEventListener("input",update_preview_size);
+}
+function update_preview_size(e)
+{
+	if(this.value==this.max)
+		css_getclass('table tr td').style.width="";
+	else
+	{
+		/*css_getclass('table tr td').style.width=this.value/2+"em";
+		css_getclass('table tr td').style.height=this.value/2+"em";*/
+		css_getclass('table tr td').style.fontSize=(this.value)+"em";
+	}
+}
+function cssrules(){
+  var rules={}; var ds=document.styleSheets,dsl=ds.length;
+  for (var i=0;i<dsl;++i){
+    var dsi=ds[i].cssRules,dsil=dsi.length;
+    for (var j=0;j<dsil;++j) rules[dsi[j].selectorText]=dsi[j];
+  }
+  return rules;
+};
+function css_getclass(name,createifnotfound){
+  var rules=cssrules();
+  if (!rules.hasOwnProperty(name)) throw 'todo:deal_with_notfound_case';
+  return rules[name];
+};
+function changeJob(){
+	document.getElementById("job").innerText = document.getElementById("jobselect").value;
+}
+</script>
+</head>
+
+<body onload="load_image_list();add_event_listeners();">
+<div id="controls">
+	<span style="float:right;" onclick="print();">Print</span>
+<div style="clear:left;"><select name="jobselect" id="jobselect" onchange="changeJob();">
+<option value="Eat Vegetables. Eat your food nicely. Don't get up until dinner is done.">Vegetables</option>
+<option value="Clean up all your toys, shoes, and games. Put blankets on your bed.">Clean Up</option>
+<option value="Do your homework.">Homework</option>
+<option></option>
+        </select>
+        <select id="ImageList" onchange="change_image(this.value)"></select>
+        </div>
+
+	<div style="float:left">
+		Width:<input type="text" name="width" size="2" value="4"  onchange="make_table()" />
+		Height:<input type="text" name="height" size="2" value="4" onchange="make_table()" />
+		FreeSpaces: <input type="text" name="free" size="2" value="0" onchange="make_table()" /> 
+		Replace: <input type="checkbox" name="replace" onchange="make_table()" />
+		Size: <input type="range" min="1" max="8" value="4" step="0.25" id="size_slider" />
+	</div>
+</div>
+<div id="content">
+<div>
+	<img src="" id="SkylanderImg" alt="Pick An Image"/>
+	<h2 contenteditable="true" id="job">Eat Vegetables. Eat your food nicely. Don't get up until dinner is done.</h2>
+	<h2 contenteditable="true" id="reward">Earn a Treat<!--<span>Skylander</span><img src="images/Skylanders_Logo.png" alt="Skylanders Logo" />--></h2>
+</div>
+<table id="grid">
+<tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+<tr><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+<tr><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+</table>
+</div>
+</body></html>
