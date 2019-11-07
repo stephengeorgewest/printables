@@ -2,125 +2,8 @@
 <html><head>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <title>Project</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
 <style type="text/css">
-
-body
-{
-	font-family: serif;
-	background: white;
-}
-#controls{
-	/*position:absolute;*/
-	height:3em;
-	top:0em;
-	width:98%;
-}
-@media print
-{
-	#controls{display:none;}
-}
-@media screen
-{
-	#content{
-		width: 511pt;
-	/*about the page width http://stackoverflow.com/questions/320357/safe-width-in-pixel-for-printing-web-pages*/
-		height: 714pt;
-		margin: auto;
-		overflow:hidden;
-		border: 1px dashed green;
-	}
-}
-#content{
-    column-count: 2;
-    padding-top: 0.2em;
-}
-h1{
-	margin-left:1em;
-	margin-right:1em;
-}
-h2{
-	font-family:monospace;
-	font-size:2em;
-	margin-top:0em;
-	margin-bottom:0em;
-}
-
-
-.box:last-child,
-.box:last-child div{
-	margin-bottom:0em;
-}
-
-.box.wide {
-    column-span: all;
-}
-.box.top div{height:5em;}
-.box.tall div{height: 40em;}
-div.box{
-	-webkit-column-break-inside: avoid;
-	width: 100%;
-	padding-top: 1em;
-	margin-bottom: 0.4em;
-	padding-bottom: 0.4em;
-}
-div.box div{
-	border: 1px solid black;
-	margin-bottom: 1em;
-	padding-top: 1em;
-	height: 18em;
-}
-div.box div h2{
-	margin-top: -1.2em;
-	margin-bottom: -0.5em;
-	padding: 0.1em;
-	margin-left: 0.5em;
-	background: white;
-	width: fit-content;
-	z-index: 5;
-}
-ul.check {
-	/* padding-inline-start: 0.5em; */
-}
-ul.check, ol {
-	padding-inline-end: 0.5em;
-}
-li{
-    margin: 0;
-    margin-left: 1em;
-    padding-left: 0;
-    border-bottom: 1.4px dashed #d8d8d8;
-    height: 1.5em;
-    box-sizing: border-box;
-}
-li:before{
-	content: " ";
-}
-ul.check li:before {
-    content: "☐";
-    position: absolute;
-    left: 3em;
-    height: 0.1em;
-    margin-top: 0.3em;
-}
-ul.check  li{
-    list-style: none;
-    padding-top: 0em;
-}/*
-ul.check li span:first-child{
-	    float: left;
-	    height: 100%;
-	    width: 1em;
-	    background: white;
-	    line-height: 1em;
-	    padding-top: 0.2em;
-	    margin-right: -0.9em;
-	    padding-right: 1em;
-	    box-sizing: border-box;
-}*/
-li span{
-	width:100%;
-	display:block;
-}
 
 </style>
 
@@ -135,36 +18,36 @@ li span{
 </div>
 <div id="content">
 
-<div class="box wide top"><div><h2>Project</h2><h1 contenteditable="true"></h1></div></div>
+<div class="box wide short"><div><h2>Project</h2><h1 contenteditable="true"></h1></div></div>
 <div class="box"><div><h2>Materials</h2>
 	<ul class="check">
-		<li><span contenteditable="true"></span></li>
-		<li><span contenteditable="true"></span></li>
-		<li><span contenteditable="true"></span></li>
-		<li><span contenteditable="true"></span></li>
-		<li><span contenteditable="true"></span></li>
-		<li><span contenteditable="true"></span></li>
-		<li><span contenteditable="true"></span></li>
-		<li><span contenteditable="true"></span></li>
-		<li><span contenteditable="true"></span></li>
-		<li><span contenteditable="true"></span></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
 	</ul>
 </div></div>
 <div class="box"><div><h2>Steps</h2>
 	<ol>
-		<li><span contenteditable="true"></li>
-		<li><span contenteditable="true"></li>
-		<li><span contenteditable="true"></li>
-		<li><span contenteditable="true"></li>
-		<li><span contenteditable="true"></li>
-		<li><span contenteditable="true"></li>
-		<li><span contenteditable="true"></li>
-		<li><span contenteditable="true"></li>
-		<li><span contenteditable="true"></li>
-		<li><span contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
+		<li contenteditable="true"></li>
 	</ol>
 </div></div>
-<div class="box wide tall"><div><h2>Notes</h2></div></div>
+<div class="box wide tall"><div><h2>Notes</h2><div contenteditable="true"></div></div></div>
 <!--
 <div class="box"><div><h2>text5</h2><ol><li>ue</li><li>uu</li><li>aoeu</li></ol></div></div>
 <div class="box"><div><h2>text6</h2><ol><li>ue</li><li>uu</li><li>aoeu</li></ol></div></div>
