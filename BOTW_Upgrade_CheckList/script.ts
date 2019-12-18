@@ -55,7 +55,7 @@ var upgrades: upgraden = {
 				Equip: "Head",
 				Name: "Ancient Helm",
 				Bonus: "Guardian Resist Up",
-				Cost: { "Rupees": 2000, "Ancient Gear": 20, "Ancient Spring": 5, "Ancient Core": 3, "Ancient Screw": 0 },
+				Cost: { "Rupees": 2000, "Ancient Gear": 20, "Ancient Spring": 5, "Ancient Core": 3},
 				"Upgrade Requirements": {
 					1: { "Ancient Screw": 5, "Ancient Spring": 5 },
 					2: { "Ancient Spring": 15, "Ancient Gear": 10 },
@@ -738,7 +738,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
 	]
 }
 function fn(){
-	let content = document.getElementById("content");
+	let content = document.getElementById("checkboxes");
 	
 	upgrades["Set Items"].forEach((set) => {
 		let set_div = document.createElement("div");
@@ -765,11 +765,14 @@ function fn(){
 					return value  + ":"+ item.Cost[value];
 				}).reduce((previousValue, currentValue, currentIndex, array) =>{
 					if(previousValue){
-						return previousValue + " , " + currentValue;
+						return previousValue + ", " + currentValue;
 					}
 					else return currentValue;
 				});
 				cost_element.title = cost_flat;
+				cost_element.onchange = (ev: Event) => {
+					addCost(item.Name, item.Cost);
+				};
 				cost_element.value = JSON.stringify(item.Cost);
 				item_div.appendChild(cost_element);
 			}
@@ -788,5 +791,30 @@ function fn(){
 		
 		content.appendChild(set_div);
 	})
+}
+var selectedCosts: {[name in string]: cost} = {};
+function addCost(name: string, c:cost){
+	if(selectedCosts[name])
+		delete(selectedCosts[name]);
+	else
+		selectedCosts[name] = c;
+	let totalCost: cost = {};
+	Object.keys(selectedCosts).forEach((selected, index, array) =>{
+		Object.keys(selectedCosts[selected]).forEach((costKey, index, array) => {
+			if(totalCost[costKey])
+				totalCost[costKey] += selectedCosts[selected][costKey];
+			else
+				totalCost[costKey] = selectedCosts[selected][costKey];
+		});
+	});
+	let ul = document.createElement("ul");
+	Object.keys(totalCost).forEach((value, index, array)=>{
+		let li = document.createElement("li");
+		li.innerText = value + " " + totalCost[value];
+		ul.appendChild(li);
+	});
+	
+	let totals = document.getElementById("totals");
+	totals.replaceChild(ul, totals.firstChild);
 }
 window.addEventListener("load", fn);
