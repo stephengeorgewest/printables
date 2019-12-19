@@ -1,6 +1,5 @@
 interface upgraden {
 	"Set Items": set[];
-	"Non Set Armor Items": item[];
 }
 interface set {
 	Name: string;
@@ -19,7 +18,7 @@ interface item {
 		[key in 1 | 2 | 3 | 4]?: cost;
 	};
 };
-type equip = "Head" | "Body" | "Feet";
+type equip = "Head" | "Body" | "Feet" | "N/A";
 type cost = {
 	[key in resource]?: number;
 };
@@ -28,25 +27,42 @@ type ancient_resource = "Ancient Screw" | "Ancient Spring" | "Ancient Shaft" | "
 type fish_resource = "Hyrule Bass" | "Hearty Bass" | "Stealthfin Trout";
 type gem_resource = "Flint" | "Amber" | "Sapphire" | "Ruby" | "Topaz" | "Opal" | "Luminous Stone" | "Diamond";
 type monster_resource = "Chuchu Jelly" | "Red Chuchu Jelly" | "Yellow Chuchu Jelly" | "White Chuchu Jelly" |
+	"Octorok Tentacle" | "Octo Balloon" | "Octorok Eyeball" |
 	"Keese Eyeball" | "Keese Wing" | "Fire Keese Wing" | "Ice Keese Wing" | "Electric Keese Wing" |
 	"Bokoblin Horn" | "Bokoblin Fang" | "Bokoblin Guts" |
 	"Lizalfos Horn" | "Lizalfos Talon" | "Lizalfos Tail" |
 	"Red Lizalfos Tail" | "Yellow Lizalfos Tail" | "Icy Lizalfos Tail" |
 	"Moblin Fang" | "Moblin Horn" | "Moblin Guts" |
 	"Lynel Hoof" | "Lynel Guts" | "Lynel Horn" |
-	"Molduga Guts" | "Hinox Guts" |
+	"Molduga Fin" | "Molduga Guts" | "Hinox Guts" |
 	"Dinraal’s Scale" | "Dinraal’s Claw" | "Dinraal’s Fang" | "Shard of Dinraal’s Horn" |
 	"Farosh’s Scale" | "Farosh’s Claw" | "Farosh’s Fang" | "Shard of Farosh’s Horn" |
 	"Naydra’s Scale" | "Naydra’s Claw" | "Naydra’s Fang" | "Shard of Naydra’s Horn";
-type plant_resource = "Acorn" | "Voltfruit" | "Courser Bee Honey" |
+type plant_resource = "Acorn" | "Voltfruit" | "Courser Bee Honey" | "Swift Carrot" |
 	"Zapshroom" | "Silent Shroom" | "Rushroom" | "Sunshroom" | "Blue Nightshade" |
 	"Silent Princess" | "Swift Violet" | "Warm Safflina" |
-	"Sunset Firefly" |  "Hot-Footed Frog" | "Sneaky River Snail" | "Hightail Lizard" | "Fireproof Lizard" |
+	"Sunset Firefly" | "Hot-Footed Frog" | "Sneaky River Snail" | "Hightail Lizard" | "Fireproof Lizard" |
 	"Smotherwing Butterfly" | "Energetic Rhino Beetle";
 type other_resource = "Star Fragment" | "Rupees" | "Mon" | "Divine Beasts" | "?" | "??";
 
-var upgrades: upgraden = {
-	"Set Items": [{
+var Sets: set[] = [
+	{
+		"Name": "Faries",
+		"Description": "Faries",
+		"Items": [
+			{
+				Name: "Faries",
+				"Equip": "N/A",
+				"Upgrade Requirements": {
+					1: { Rupees: 100 },
+					2: { Rupees: 500 },
+					3: { Rupees: 1000 },
+					4: { Rupees: 10000 },
+				}
+			}
+		]
+	},
+	{
 		Name: "Ancient",
 		SetBonus: "Ancient Weapon Attack Up (set bonus at upgrade level 2)",
 		Description: "This set is available for purchase at the laboratory in East Akkala once the furnace has been relit with blue fire. It can be upgraded with Ancient parts obtained from killing and scavenging Guardians.",
@@ -55,7 +71,7 @@ var upgrades: upgraden = {
 				Equip: "Head",
 				Name: "Ancient Helm",
 				Bonus: "Guardian Resist Up",
-				Cost: { "Rupees": 2000, "Ancient Gear": 20, "Ancient Spring": 5, "Ancient Core": 3},
+				Cost: { "Rupees": 2000, "Ancient Gear": 20, "Ancient Spring": 5, "Ancient Core": 3 },
 				"Upgrade Requirements": {
 					1: { "Ancient Screw": 5, "Ancient Spring": 5 },
 					2: { "Ancient Spring": 15, "Ancient Gear": 10 },
@@ -67,7 +83,7 @@ var upgrades: upgraden = {
 				Equip: "Body",
 				Name: "Ancient Cuirass",
 				Bonus: "Guardian Resist Up",
-				Cost:{ "Rupees": 2000, "Ancient Gear": 20, "Ancient Spring": 5 },
+				Cost: { "Rupees": 2000, "Ancient Gear": 20, "Ancient Spring": 5 },
 				"Upgrade Requirements": {
 					1: { "Ancient Screw": 5, "Ancient Spring": 5 },
 					2: { "Ancient Spring": 15, "Ancient Gear": 10 },
@@ -594,227 +610,317 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
 					}
 				},
 			]
+	},
+	{
+		Name: "Non Set Armor Items",
+		Description: "non set items",
+		Items: [
+			{
+				Equip: "Body",
+				Name: "Champion’s Tunic",
+				Bonus: "Reveal Enemy HP",
+				Description: "Impa in Kakariko Village will give Link this clothing item when he has recovered at least one memory in the main quest Captured Memories.",
+				"Upgrade Requirements": {
+					1: { "Silent Princess": 3 },
+					2: { "Silent Princess": 3, "Shard of Farosh’s Horn": 2 },
+					3: { "Silent Princess": 3, "Shard of Naydra’s Horn": 2 },
+					4: { "Silent Princess": 10, "Shard of Dinraal’s Horn": 2 },
+				}
+			},
+			{
+				Equip: "Feet",
+				Name: "Sand Boots",
+				Bonus: "Sand Speed Up",
+				Description: "At the entrance to Gerudo Town is a running man named Bozai. Talk to him while wearing the Gerudo Outfit to start the quest The Eighth Heroine, which will award the boots upon completion.",
+				"Upgrade Requirements": {
+					1: { "Molduga Fin": 5, "Hightail Lizard": 10 },
+					2: { "Molduga Fin": 10, "Swift Carrot": 10 },
+					3: { "Molduga Guts": 2, "Rushroom": 15 },
+					4: { "Molduga Guts": 4, "Swift Violet": 15 },
+				}
+			},
+			{
+				Equip: "Feet",
+				Name: "Snow Boots",
+				Bonus: "Snow Speed Up",
+				Description: "At the beginning of the quest The Eighth Heroine (described above), Bozai will “lend” you these boots.",
+				"Upgrade Requirements": {
+					1: { "Octorok Tentacle": 5, "Hightail Lizard": 10 },
+					2: { "Octo Balloon": 5, "Swift Carrot": 10 },
+					3: { "Octorok Eyeball": 5, "Rushroom": 15 },
+					4: { "Naydra’s Scale": 2, "Swift Violet": 15 },
+				}
+			},
+			{
+				Equip: "Head",
+				Name: "Thunder Helm",
+				Bonus: "Lightning Guard",
+				Description: "One of the more difficult items to obtain, getting this will require helping Riju retrieve the helm from the Yiga Clan, then completing the Divine Beast Vah Naboris quest and all the sidequests in Gerudo Town to win her trust so you can use it. Get the process started by speaking to her in Gerudo Town."
+			},
+			{
+				Equip: "Body",
+				Name: "Warm Doublet",
+				Bonus: "Cold Resistance Up",
+				Description: "This piece of clothing is obtained in the tutorial portion of the game. Read the book in the Old Man’s cabin and make him a meal with Hyrule Bass and Spicy Peppers. If you climb to Mount Hylia without it, he’ll give it to you once you reach the top.",
+			},
+		],
+	},
+	{
+		Name: "Jewelry",
+		Description: "All items can be purchased at Gerudo Jewelers in Gerudo Town. The shop owner must be given 10 Flint before she can sell to you.",
+		Items: [
+			{
+				Name: "Amber Earrings",
+				Equip: "Head",
+				Bonus: "Heat Resistance",
+				Cost: { Rupees: 100, Amber: 10 },
+				"Upgrade Requirements": {
+					1: { "Amber": 5, "Flint": 3 },
+					2: { "Amber": 10, "Flint": 3 },
+					3: { "Amber": 20, "Flint": 3 },
+					4: { "Amber": 30, "Flint": 3 },
+				}
+			},
+			{
+				Name: "Diamond Circlet", Equip: "Head", Bonus: "Guardian Resist Up",
+				Cost: { "Rupees": 1500, "Diamond": 2 },
+
+				"Upgrade Requirements": {
+					1: { "Diamond": 2, "Flint": 3 },
+					2: { "Diamond": 4, "Flint": 3 },
+					3: { "Diamond": 6, "Star Fragment": 1 },
+					4: { "Diamond": 10, "Star Fragment": 1 },
+
+				},
+			},
+			{
+				Name: "Opal Earrings", Equip: "Head", Bonus: "Swim Speed Up",
+				Cost: { "Rupees": 200, "Opal": 8 },
+
+				"Upgrade Requirements": {
+					1: { "Opal": 5, "Flint": 3 },
+					2: { "Opal": 8, "Flint": 3 },
+					3: { "Opal": 16, "Star Fragment": 1 },
+					4: { "Opal": 20, "Star Fragment": 1 },
+				},
+			},
+			{
+				Name: "Ruby Circlet", Equip: "Head", Bonus: "Cold Resistance Up",
+				Cost: { "Rupees": 500, "Ruby": 3 },
+
+				"Upgrade Requirements": {
+					1: { "Ruby": 2, "Flint": 3 },
+					2: { "Ruby": 4, "Flint": 3 },
+					3: { "Ruby": 6, "Star Fragment": 1 },
+					4: { "Ruby": 10, "Star Fragment": 1 },
+				}
+			},
+			{
+				Name: "Sapphire Circlet", Equip: "Head", Bonus: "Heat Resistance Up",
+				Cost: { "Rupees": 800, "Sapphire": 3 },
+
+				"Upgrade Requirements": {
+					1: { "Sapphire": 2, "Flint": 3 },
+					2: { "Sapphire": 4, "Flint": 3 },
+					3: { "Sapphire": 6, "Star Fragment": 1 },
+					4: { "Sapphire": 10, "Star Fragment": 1 },
+				}
+			},
+			{
+				Name: "Topaz Earrings", Equip: "Head", Bonus: "Shock Resistance Up",
+				Cost: { "Rupees": 500, "Topaz": 5 },
+
+				"Upgrade Requirements": {
+					1: { "Topaz": 2, "Flint": 3 },
+					2: { "Topaz": 4, "Flint": 3 },
+					3: { "Topaz": 6, "Star Fragment": 1 },
+					4: { "Topaz": 10, "Star Fragment": 1 },
+				},
+			},
+		],
+	},
+	{
+		Name: "Kilton Masks",
+		Description: "All masks are bought from Kilton the Monster Merchant, who can be initially found in East Akkala at his shop Fang and Bone, which opens up after 10 PM in the left eye of the skull-shaped lake in Deep Akkala. He will then circle through several towns (Gerudo Town, Hateno Village, Kakariko Village, Lurelin Village, Rito Village, Tarrey Town/Lake Akkala, Zora’s Domain) and appear only at night, selling different items depending on how many Divine Beasts have been defeated. Exchange monsters parts for his currency, Mon, and purchase these items. None of them can be upgraded.",
+		Items: [
+			{
+				Name: "Bokoblin Mask", Equip: "Head", Bonus: "Blend with Bokoblins",
+				Cost: { "Mon": 99 },
+			},
+			{
+				Name: "Lizalfos Mask", Equip: "Head", Bonus: "Blend with Lizalfos",
+				Cost: { "Mon": 299, "Divine Beasts": 2 },
+			},
+			{
+				Name: "Lynel Mask", Equip: "Head", Bonus: "Blend with Lynels",
+				Cost: { "Mon": 999, "Divine Beasts": 3 },
+			},
+			{
+				Name: "Moblin Mask", Equip: "Head", Bonus: "Blend with Mobins",
+				Cost: { "Mon": 199, "Divine Beasts": 1 },
+			}
+		],
+	},
+	{
+		Name: "Champion Helments",
+		Description: "",
+		SetBonus: "Ancient Proficiency(Shared with Ancient Set)",
+		Items: [
+			{
+				Name: "Vah Ruta Divine Helm",
+				Bonus: "Swim Speed Up",
+				Equip: "Head",
+				"Upgrade Requirements": {
+					1: { "Ancient Screw": 5, "Ancient Spring": 5 },
+					2: { "Ancient Spring": 15, "Ancient Gear": 10 },
+					3: { "Ancient Shaft": 15, "Ancient Core": 5 },
+					4: { "Star Fragment": 1, "Giant Ancient Core": 2 },
+				},
+			},
+			{
+				Name: "Vah Rudania Divine Helm",
+				Bonus: "?",
+				Equip: "Head",
+				"Upgrade Requirements": {
+					1: { "Ancient Screw": 5, "Ancient Spring": 5 },
+					2: { "Ancient Spring": 15, "Ancient Gear": 10 },
+					3: { "Ancient Shaft": 15, "Ancient Core": 5 },
+					4: { "Star Fragment": 1, "Giant Ancient Core": 2 },
+				},
+
+			},
+			{
+				Name: "Vah Medoh Divine Helm",
+				Bonus: "?",
+				Equip: "Head",
+				"Upgrade Requirements": {
+					1: { "Ancient Screw": 5, "Ancient Spring": 5 },
+					2: { "Ancient Spring": 15, "Ancient Gear": 10 },
+					3: { "Ancient Shaft": 15, "Ancient Core": 5 },
+					4: { "Star Fragment": 1, "Giant Ancient Core": 2 },
+				},
+
+			},
+			{
+				Name: "Vah Naboris Divine Helm",
+				Bonus: "Electric Resistance",
+				Equip: "Head",
+				"Upgrade Requirements": {
+					1: { "Ancient Screw": 5, "Ancient Spring": 5 },
+					2: { "Ancient Spring": 15, "Ancient Gear": 10 },
+					3: { "Ancient Shaft": 15, "Ancient Core": 5 },
+					4: { "Star Fragment": 1, "Giant Ancient Core": 2 },
+				},
+
+			}
+		]
 	}
-	],
-	"Non Set Armor Items": [
-		{
-			Equip: "Body",
-			Name: "Champion’s Tunic",
-			Bonus: "Reveal Enemy HP",
-			Description: "Impa in Kakariko Village will give Link this clothing item when he has recovered at least one memory in the main quest Captured Memories.",
-			"Upgrade Requirements": {
-				1: { "Silent Princess": 3 },
-				2: { "Silent Princess": 3, "Shard of Farosh’s Horn": 2 },
-				3: { "Silent Princess": 3, "Shard of Naydra’s Horn": 2 },
-				4: { "Silent Princess": 10, "Shard of Dinraal’s Horn": 2 },
-			}
-		},
-		{
-			Equip: "Feet",
-			Name: "Sand Boots",
-			Bonus: "Sand Speed Up",
-			Description: "At the entrance to Gerudo Town is a running man named Bozai. Talk to him while wearing the Gerudo Outfit to start the quest The Eighth Heroine, which will award the boots upon completion.",
-		},
-		{
-			Equip: "Feet",
-			Name: "Snow Boots",
-			Bonus: "Snow Speed Up",
-			Description: "At the beginning of the quest The Eighth Heroine (described above), Bozai will “lend” you these boots."
-		},
-		{
-			Equip: "Head",
-			Name: "Thunder Helm",
-			Bonus: "Lightning Guard",
-			Description: "One of the more difficult items to obtain, getting this will require helping Riju retrieve the helm from the Yiga Clan, then completing the Divine Beast Vah Naboris quest and all the sidequests in Gerudo Town to win her trust so you can use it. Get the process started by speaking to her in Gerudo Town."
-		},
-		{
-			Equip: "Body",
-			Name: "Warm Doublet",
-			Bonus: "Cold Resistance Up",
-			Description: "This piece of clothing is obtained in the tutorial portion of the game. Read the book in the Old Man’s cabin and make him a meal with Hyrule Bass and Spicy Peppers. If you climb to Mount Hylia without it, he’ll give it to you once you reach the top.",
-		},
-		//],
-		//"Jewelry":[			//All items can be purchased at Gerudo Jewelers in Gerudo Town. The shop owner must be given 10 Flint before she can sell to you.
-		{
-			Name: "Amber Earrings",
-			Equip: "Head",
-			Bonus: "Heat Resistance",
-			Cost: { Rupees: 100, Amber: 10 },
-			"Upgrade Requirements": {
-				1: { "Amber": 5, "Flint": 3 },
-				2: { "Amber": 10, "Flint": 3 },
-				3: { "Amber": 20, "Flint": 3 },
-				4: { "Amber": 30, "Flint": 3 },
-			}
-		},
-		{
-			Name: "Diamond Circlet", Equip: "Head", Bonus: "Guardian Resist Up",
-			Cost: { "Rupees": 1500, "Diamond": 2 },
-
-			"Upgrade Requirements": {
-				1: { "Diamond": 2, "Flint": 3 },
-				2: { "Diamond": 4, "Flint": 3 },
-				3: { "Diamond": 6, "Star Fragment": 1 },
-				4: { "Diamond": 10, "Star Fragment": 1 },
-
-			},
-		},
-		{
-			Name: "Opal Earrings", Equip: "Head", Bonus: "Swim Speed Up",
-			Cost: { "Rupees": 200, "Opal": 8 },
-
-			"Upgrade Requirements": {
-				1: { "Opal": 5, "Flint": 3 },
-				2: { "Opal": 8, "Flint": 3 },
-				3: { "Opal": 16, "Star Fragment": 1 },
-				4: { "Opal": 20, "Star Fragment": 1 },
-			},
-		},
-		{
-			Name: "Ruby Circlet", Equip: "Head", Bonus: "Cold Resistance Up",
-			Cost: { "Rupees": 500, "Ruby": 3 },
-
-			"Upgrade Requirements": {
-				1: { "Ruby": 2, "Flint": 3 },
-				2: { "Ruby": 4, "Flint": 3 },
-				3: { "Ruby": 6, "Star Fragment": 1 },
-				4: { "Ruby": 10, "Star Fragment": 1 },
-			}
-		},
-		{
-			Name: "Sapphire Circlet", Equip: "Head", Bonus: "Heat Resistance Up",
-			Cost: { "Rupees": 800, "Sapphire": 3 },
-
-			"Upgrade Requirements": {
-				1: { "Sapphire": 2, "Flint": 3 },
-				2: { "Sapphire": 4, "Flint": 3 },
-				3: { "Sapphire": 6, "Star Fragment": 1 },
-				4: { "Sapphire": 10, "Star Fragment": 1 },
-			}
-		},
-		{
-			Name: "Topaz Earrings", Equip: "Head", Bonus: "Shock Resistance Up",
-			Cost: { "Rupees": 500, "Topaz": 5 },
-
-			"Upgrade Requirements": {
-				1: { "Topaz": 2, "Flint": 3 },
-				2: { "Topaz": 4, "Flint": 3 },
-				3: { "Topaz": 6, "Star Fragment": 1 },
-				4: { "Topaz": 10, "Star Fragment": 1 },
-			},
-		},
-		//],
-		//"Kilton Masks":[
-		//All masks are bought from Kilton the Monster Merchant, who can be initially found in East Akkala at his shop Fang and Bone, which opens up after 10 PM in the left eye of the skull-shaped lake in Deep Akkala. He will then circle through several towns (Gerudo Town, Hateno Village, Kakariko Village, Lurelin Village, Rito Village, Tarrey Town/Lake Akkala, Zora’s Domain) and appear only at night, selling different items depending on how many Divine Beasts have been defeated. Exchange monsters parts for his currency, Mon, and purchase these items.
-		//None of them can be upgraded.
-		{
-			Name: "Bokoblin Mask", Equip: "Head", Bonus: "Blend with Bokoblins",
-			Cost: { "Mon": 99 },
-		},
-		{
-			Name: "Lizalfos Mask", Equip: "Head", Bonus: "Blend with Lizalfos",
-			Cost: { "Mon": 299, "Divine Beasts": 2 },
-		},
-		{
-			Name: "Lynel Mask", Equip: "Head", Bonus: "Blend with Lynels",
-			Cost: { "Mon": 999, "Divine Beasts": 3 },
-		},
-		{
-			Name: "Moblin Mask", Equip: "Head", Bonus: "Blend with Mobins",
-			Cost: { "Mon": 199, "Divine Beasts": 1 },
-		},
-		//],
-		//"Champion Helments":[
-		{
-			Name: "Vah Huta Divine Helm", Bonus: "Swim Speed Up",
-			Equip: "Head",
-			"Upgrade Requirements": {
-				1: { "Ancient Screw": 5, "Ancient Spring": 5 },
-				2: { "Ancient Spring": 15, "Ancient Gear": 10 },
-				3: { "Ancient Shaft": 15, "Ancient Core": 5 },
-				4: { "?": 0, "??": 0 },
-			},
-		}
-	]
-}
-function fn(){
+]
+function fn() {
 	let content = document.getElementById("checkboxes");
-	
-	upgrades["Set Items"].forEach((set) => {
+
+	Sets.forEach((set) => {
 		let set_div = document.createElement("div");
 		let set_name_span = document.createElement("h4");
 		set_div.classList.add("set");
 		set_name_span.innerText = set.Name;
-		if(set.Cost){
-			let item_cost_element = document.createElement("input");
-			item_cost_element.type = "checkbox";
+		if (set.Cost) {
+			let item_cost_element = createCheckbox(set.Name, set.Cost);
 			set_name_span.appendChild(item_cost_element);
 		}
 		set_div.appendChild(set_name_span);
-		
-		set.Items.forEach((item)=>{
-			let item_div = document.createElement("div", );
+
+		set.Items.forEach((item) => {
+			let item_div = document.createElement("div");
 			item_div.classList.add("item");
 			let item_name_element = document.createElement("span");
 			item_name_element.innerText = item.Name;
 			item_div.appendChild(item_name_element);
-			if(item.Cost){
-				let cost_element = document.createElement("input");
-				cost_element.type= "checkbox";
-				let cost_flat = Object.keys(item.Cost).map((value, index, array) =>{
-					return value  + ":"+ item.Cost[value];
-				}).reduce((previousValue, currentValue, currentIndex, array) =>{
-					if(previousValue){
-						return previousValue + ", " + currentValue;
-					}
-					else return currentValue;
-				});
-				cost_element.title = cost_flat;
-				cost_element.onchange = (ev: Event) => {
-					addCost(item.Name, item.Cost);
-				};
-				cost_element.value = JSON.stringify(item.Cost);
+			if (item.Cost) {
+				let cost_element = createCheckbox(item.Name, item.Cost);
 				item_div.appendChild(cost_element);
 			}
-			if(item["Upgrade Requirements"]){
+			if (item["Upgrade Requirements"]) {
 				Object.keys(item["Upgrade Requirements"]).sort().forEach(index => {
-					let a = item["Upgrade Requirements"];
-					let upgrade: cost = a[index];
-					let upgrade_element = document.createElement("input");;
-					upgrade_element.type = "checkbox";
-					upgrade_element.classList.add("upgrade");
+					let upgrade: cost = item["Upgrade Requirements"][index];
+					let upgrade_element = createCheckbox(item.Name + index, upgrade);
 					item_div.appendChild(upgrade_element);
 				});
 			}
 			set_div.appendChild(item_div);
 		});
-		
+
 		content.appendChild(set_div);
-	})
+	});
+	total();
 }
-var selectedCosts: {[name in string]: cost} = {};
-function addCost(name: string, c:cost){
-	if(selectedCosts[name])
-		delete(selectedCosts[name]);
+function createCheckbox(n: string, c: cost) {
+	let cost_element = document.createElement("input");
+	cost_element.type = "checkbox";
+	addCost(n, c);
+	let cost_flat = Object.keys(c).map((value, index, array) => {
+		return value + ":" + c[value];
+	}).reduce((previousValue, currentValue, currentIndex, array) => {
+		if (previousValue) {
+			return previousValue + ", " + currentValue;
+		}
+		else
+			return currentValue;
+	});
+	cost_element.title = cost_flat;
+	cost_element.onchange = (ev: Event) => {
+		addCostTotal(n, c);
+	};
+	cost_element.value = JSON.stringify(c);
+	return cost_element;
+}
+
+var selectedCosts: { [name in string]: cost } = {};
+
+function addCostTotal(name: string, c: cost) {
+	addCost(name, c);
+	total();
+}
+
+function addCost(name: string, c: cost) {
+	if (selectedCosts[name])
+		delete (selectedCosts[name]);
 	else
 		selectedCosts[name] = c;
+}
+
+function total() {
 	let totalCost: cost = {};
-	Object.keys(selectedCosts).forEach((selected, index, array) =>{
+	Object.keys(selectedCosts).forEach((selected, index, array) => {
 		Object.keys(selectedCosts[selected]).forEach((costKey, index, array) => {
-			if(totalCost[costKey])
-				totalCost[costKey] += selectedCosts[selected][costKey];
+			if (totalCost[costKey])
+				if (costKey == "Divine Beasts")
+					totalCost[costKey] = Math.max(totalCost[costKey], selectedCosts[selected][costKey]);
+				else
+					totalCost[costKey] += selectedCosts[selected][costKey];
 			else
 				totalCost[costKey] = selectedCosts[selected][costKey];
 		});
 	});
 	let ul = document.createElement("ul");
-	Object.keys(totalCost).forEach((value, index, array)=>{
+	Object.keys(totalCost).forEach((value, index, array) => {
 		let li = document.createElement("li");
 		li.innerText = value + " " + totalCost[value];
 		ul.appendChild(li);
 	});
-	
+
 	let totals = document.getElementById("totals");
-	totals.replaceChild(ul, totals.firstChild);
+	if (totals.firstChild)
+		totals.replaceChild(ul, totals.firstChild);
+	else
+		totals.appendChild(ul);
 }
+
+function clickAll() {
+	let inputs = document.getElementsByTagName("input");
+	for (var i = 0; i < inputs.length; i++) {
+		inputs[i].click();
+	}
+}
+
 window.addEventListener("load", fn);
