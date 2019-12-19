@@ -2,17 +2,17 @@
 ;
 var Sets = [
     {
-        "Name": "Faries",
-        "Description": "Faries",
+        "Name": "Fairies",
+        "Description": "Fairies",
         "Items": [
             {
-                Name: "Faries",
+                Name: "Fairies",
                 "Equip": "N/A",
                 "Upgrade Requirements": {
                     1: { Rupees: 100 },
                     2: { Rupees: 500 },
                     3: { Rupees: 1000 },
-                    4: { Rupees: 10000 },
+                    4: { Rupees: 10000 }
                 }
             }
         ]
@@ -44,7 +44,7 @@ var Sets = [
                     2: { "Ancient Spring": 15, "Ancient Gear": 10 },
                     3: { "Ancient Shaft": 15, "Ancient Core": 5 },
                     4: { "Star Fragment": 1, "Giant Ancient Core": 2 }
-                },
+                }
             },
             {
                 Equip: "Feet",
@@ -55,7 +55,7 @@ var Sets = [
                     1: { "Ancient Screw": 5, "Ancient Spring": 5 },
                     2: { "Ancient Spring": 15, "Ancient Gear": 10 },
                     3: { "Ancient Shaft": 15, "Ancient Core": 5 },
-                    4: { "Star Fragment": 1, "Giant Ancient Core": 2 },
+                    4: { "Star Fragment": 1, "Giant Ancient Core": 2 }
                 }
             }
         ]
@@ -72,7 +72,7 @@ var Sets = [
                     1: { "Acorn": 10, "Farosh’s Scale": 2 },
                     2: { "Courser Bee Honey": 5, "Farosh’s Claw": 2 },
                     3: { "Energetic Rhino Beetle": 5, "Farosh’s Fang": 2 },
-                    4: { "Star Fragment": 1, "Shard of Farosh’s Horn": 2 },
+                    4: { "Star Fragment": 1, "Shard of Farosh’s Horn": 2 }
                 }
             },
             {
@@ -82,7 +82,7 @@ var Sets = [
                     1: { "Acorn": 10, "Naydra’s Scale": 2 },
                     2: { "Courser Bee Honey": 5, "Naydra’s Claw": 2 },
                     3: { "Energetic Rhino Beetle": 5, "Naydra’s Fang": 2 },
-                    4: { "Star Fragment": 1, "Shard of Naydra’s Horn": 2 },
+                    4: { "Star Fragment": 1, "Shard of Naydra’s Horn": 2 }
                 }
             },
             {
@@ -92,7 +92,7 @@ var Sets = [
                     1: { "Acorn": 10, "Dinraal’s Scale": 2 },
                     2: { "Courser Bee Honey": 5, "Dinraal’s Claw": 2 },
                     3: { "Energetic Rhino Beetle": 5, "Dinraal’s Fang": 2 },
-                    4: { "Star Fragment": 1, "Shard of Dinraal’s Horn": 2 },
+                    4: { "Star Fragment": 1, "Shard of Dinraal’s Horn": 2 }
                 }
             },
         ]
@@ -110,7 +110,7 @@ var Sets = [
                     1: { "Lynel Horn": 1 },
                     2: { "Lynel Horn": 3, "Lynel Hoof": 2 },
                     3: { "Lynel Hoof": 4, "Lynel Guts": 1 },
-                    4: { "Lynel Guts": 2, "Shard of Dinraal’s Horn": 1 },
+                    4: { "Lynel Guts": 2, "Shard of Dinraal’s Horn": 1 }
                 }
             },
             {
@@ -121,7 +121,7 @@ var Sets = [
                     1: { "Lynel Horn": 1 },
                     2: { "Lynel Horn": 3, "Lynel Hoof": 2 },
                     3: { "Lynel Hoof": 4, "Lynel Guts": 1 },
-                    4: { "Lynel Guts": 2, "Shard of Farosh’s Horn": 1 },
+                    4: { "Lynel Guts": 2, "Shard of Farosh’s Horn": 1 }
                 }
             },
             {
@@ -132,10 +132,10 @@ var Sets = [
                     1: { "Lynel Horn": 1 },
                     2: { "Lynel Horn": 3, "Lynel Hoof": 2 },
                     3: { "Lynel Hoof": 4, "Lynel Guts": 1 },
-                    4: { "Lynel Guts": 2, "Shard of Naydra’s Horn": 1 },
+                    4: { "Lynel Guts": 2, "Shard of Naydra’s Horn": 1 }
                 }
             },
-        ],
+        ]
     },
     {
         Name: "Climber’s",
@@ -150,7 +150,7 @@ var Sets = [
                     1: { "Keese Wing": 3, "Rushroom": 3 },
                     2: { "Electric Keese Wing": 5, "Hightail Lizard": 5 },
                     3: { "Ice Keese Wing": 5, "Hot-Footed Frog": 10 },
-                    4: { "Fire Keese Wing": 5, "Swift Violet": 15 },
+                    4: { "Fire Keese Wing": 5, "Swift Violet": 15 }
                 }
             },
             {
@@ -161,7 +161,7 @@ var Sets = [
                     1: { "Keese Wing": 3, "Rushroom": 3 },
                     2: { "Electric Keese Wing": 5, "Hightail Lizard": 5 },
                     3: { "Ice Keese Wing": 5, "Hot-Footed Frog": 10 },
-                    4: { "Fire Keese Wing": 5, "Swift Violet": 15 },
+                    4: { "Fire Keese Wing": 5, "Swift Violet": 15 }
                 }
             },
             {
@@ -172,7 +172,7 @@ var Sets = [
                     1: { "Keese Wing": 3, "Rushroom": 3 },
                     2: { "Electric Keese Wing": 5, "Hightail Lizard": 5 },
                     3: { "Ice Keese Wing": 5, "Hot-Footed Frog": 10 },
-                    4: { "Fire Keese Wing": 5, "Swift Violet": 15 },
+                    4: { "Fire Keese Wing": 5, "Swift Violet": 15 }
                 }
             },
         ]
@@ -185,7 +185,7 @@ var Sets = [
             { Equip: "Head", Name: "Dark Hood", Cost: { Mon: 1999 } },
             { Equip: "Body", Name: "Dark Tunic", Cost: { Mon: 999 } },
             { Equip: "Feet", Name: "Dark Trousers", Cost: { Mon: 999 } }
-        ],
+        ]
     },
     {
         Name: "Desert Voe",
@@ -201,7 +201,7 @@ var Sets = [
                     1: { "White Chuchu Jelly": 3 },
                     2: { "White Chuchu Jelly": 5, "Ice Keese Wing": 3 },
                     3: { "Ice Keese Wing": 8, "Icy Lizalfos Tail": 3 },
-                    4: { "Icy Lizalfos Tail": 10, "Sapphire": 5 },
+                    4: { "Icy Lizalfos Tail": 10, "Sapphire": 5 }
                 }
             },
             {
@@ -213,7 +213,7 @@ var Sets = [
                     1: { "White Chuchu Jelly": 3 },
                     2: { "White Chuchu Jelly": 5, "Ice Keese Wing": 3 },
                     3: { "Ice Keese Wing": 8, "Icy Lizalfos Tail": 3 },
-                    4: { "Icy Lizalfos Tail": 10, "Sapphire": 5 },
+                    4: { "Icy Lizalfos Tail": 10, "Sapphire": 5 }
                 }
             },
             {
@@ -225,7 +225,7 @@ var Sets = [
                     1: { "White Chuchu Jelly": 3 },
                     2: { "White Chuchu Jelly": 5, "Ice Keese Wing": 3 },
                     3: { "Ice Keese Wing": 8, "Icy Lizalfos Tail": 3 },
-                    4: { "Icy Lizalfos Tail": 10, "Sapphire": 5 },
+                    4: { "Icy Lizalfos Tail": 10, "Sapphire": 5 }
                 }
             },
         ]
@@ -244,7 +244,7 @@ var Sets = [
                     1: { "Fireproof Lizard": 1, "Moblin Horn": 2 },
                     2: { "Fireproof Lizard": 3, "Moblin Fang": 4 },
                     3: { "Smotherwing Butterfly": 3, "Moblin Guts": 3 },
-                    4: { "Smotherwing Butterfly": 5, "Hinox Guts": 2 },
+                    4: { "Smotherwing Butterfly": 5, "Hinox Guts": 2 }
                 }
             },
             {
@@ -256,7 +256,7 @@ var Sets = [
                     1: { "Fireproof Lizard": 1, "Moblin Horn": 2 },
                     2: { "Fireproof Lizard": 3, "Moblin Fang": 4 },
                     3: { "Smotherwing Butterfly": 3, "Moblin Guts": 3 },
-                    4: { "Smotherwing Butterfly": 5, "Hinox Guts": 2 },
+                    4: { "Smotherwing Butterfly": 5, "Hinox Guts": 2 }
                 }
             },
             {
@@ -268,7 +268,7 @@ var Sets = [
                     1: { "Fireproof Lizard": 1, "Moblin Horn": 2 },
                     2: { "Fireproof Lizard": 3, "Moblin Fang": 4 },
                     3: { "Smotherwing Butterfly": 3, "Moblin Guts": 3 },
-                    4: { "Smotherwing Butterfly": 5, "Hinox Guts": 2 },
+                    4: { "Smotherwing Butterfly": 5, "Hinox Guts": 2 }
                 }
             },
         ]
@@ -296,7 +296,7 @@ var Sets = [
                     1: { "Bokoblin Horn": 5 },
                     2: { "Bokoblin Horn": 8, "Bokoblin Fang": 5 },
                     3: { "Bokoblin Fang": 10, "Bokoblin Guts": 5 },
-                    4: { "Bokoblin Guts": 15, "Amber": 15 },
+                    4: { "Bokoblin Guts": 15, "Amber": 15 }
                 }
             },
             {
@@ -307,7 +307,7 @@ var Sets = [
                     1: { "Bokoblin Horn": 5 },
                     2: { "Bokoblin Horn": 8, "Bokoblin Fang": 5 },
                     3: { "Bokoblin Fang": 10, "Bokoblin Guts": 5 },
-                    4: { "Bokoblin Guts": 15, "Amber": 15 },
+                    4: { "Bokoblin Guts": 15, "Amber": 15 }
                 }
             },
             {
@@ -318,7 +318,7 @@ var Sets = [
                     1: { "Bokoblin Horn": 5 },
                     2: { "Bokoblin Horn": 8, "Bokoblin Fang": 5 },
                     3: { "Bokoblin Fang": 10, "Bokoblin Guts": 5 },
-                    4: { "Bokoblin Guts": 15, "Amber": 15 },
+                    4: { "Bokoblin Guts": 15, "Amber": 15 }
                 }
             },
         ]
@@ -336,7 +336,7 @@ var Sets = [
                     1: { "Luminous Stone": 5, "Bokoblin Guts": 3 },
                     2: { "Luminous Stone": 8, "Moblin Guts": 3 },
                     3: { "Luminous Stone": 10, "Molduga Guts": 2 },
-                    4: { "Luminous Stone": 20, "Lynel Guts": 1 },
+                    4: { "Luminous Stone": 20, "Lynel Guts": 1 }
                 }
             },
             {
@@ -346,7 +346,7 @@ var Sets = [
                     1: { "Luminous Stone": 5, "Bokoblin Guts": 3 },
                     2: { "Luminous Stone": 8, "Moblin Guts": 3 },
                     3: { "Luminous Stone": 10, "Molduga Guts": 2 },
-                    4: { "Luminous Stone": 20, "Lynel Guts": 1 },
+                    4: { "Luminous Stone": 20, "Lynel Guts": 1 }
                 }
             },
             {
@@ -357,7 +357,7 @@ var Sets = [
                     1: { "Luminous Stone": 5, "Bokoblin Guts": 3 },
                     2: { "Luminous Stone": 8, "Moblin Guts": 3 },
                     3: { "Luminous Stone": 10, "Molduga Guts": 2 },
-                    4: { "Luminous Stone": 20, "Lynel Guts": 1 },
+                    4: { "Luminous Stone": 20, "Lynel Guts": 1 }
                 }
             },
         ]
@@ -376,7 +376,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Yellow Chuchu Jelly": 3 },
                     2: { "Yellow Chuchu Jelly": 5, "Voltfruit": 5 },
                     3: { "Zapshroom": 5, "Yellow Lizalfos Tail": 5 },
-                    4: { "Yellow Lizalfos Tail": 10, "Topaz": 10 },
+                    4: { "Yellow Lizalfos Tail": 10, "Topaz": 10 }
                 }
             },
             {
@@ -387,7 +387,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Yellow Chuchu Jelly": 3 },
                     2: { "Yellow Chuchu Jelly": 5, "Voltfruit": 5 },
                     3: { "Zapshroom": 5, "Yellow Lizalfos Tail": 5 },
-                    4: { "Yellow Lizalfos Tail": 10, "Topaz": 10 },
+                    4: { "Yellow Lizalfos Tail": 10, "Topaz": 10 }
                 }
             },
             {
@@ -398,7 +398,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Yellow Chuchu Jelly": 3 },
                     2: { "Yellow Chuchu Jelly": 5, "Voltfruit": 5 },
                     3: { "Zapshroom": 5, "Yellow Lizalfos Tail": 5 },
-                    4: { "Yellow Lizalfos Tail": 10, "Topaz": 10 },
+                    4: { "Yellow Lizalfos Tail": 10, "Topaz": 10 }
                 }
             },
         ]
@@ -416,7 +416,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Blue Nightshade": 3 },
                     2: { "Blue Nightshade": 5, "Sunset Firefly": 5 },
                     3: { "Silent Shroom": 8, "Sneaky River Snail": 5 },
-                    4: { "Stealthfin Trout": 10, "Silent Princess": 5 },
+                    4: { "Stealthfin Trout": 10, "Silent Princess": 5 }
                 }
             },
             {
@@ -427,7 +427,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Blue Nightshade": 3 },
                     2: { "Blue Nightshade": 5, "Sunset Firefly": 5 },
                     3: { "Silent Shroom": 8, "Sneaky River Snail": 5 },
-                    4: { "Stealthfin Trout": 10, "Silent Princess": 5 },
+                    4: { "Stealthfin Trout": 10, "Silent Princess": 5 }
                 }
             },
             {
@@ -439,7 +439,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Blue Nightshade": 3 },
                     2: { "Blue Nightshade": 5, "Sunset Firefly": 5 },
                     3: { "Silent Shroom": 8, "Sneaky River Snail": 5 },
-                    4: { "Stealthfin Trout": 10, "Silent Princess": 5 },
+                    4: { "Stealthfin Trout": 10, "Silent Princess": 5 }
                 }
             },
         ]
@@ -458,7 +458,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Red Chuchu Jelly": 3 },
                     2: { "Red Chuchu Jelly": 5, "Warm Safflina": 3 },
                     3: { "Fire Keese Wing": 8, "Sunshroom": 5 },
-                    4: { "Red Lizalfos Tail": 10, "Ruby": 5 },
+                    4: { "Red Lizalfos Tail": 10, "Ruby": 5 }
                 }
             },
             {
@@ -470,7 +470,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Red Chuchu Jelly": 3 },
                     2: { "Red Chuchu Jelly": 5, "Warm Safflina": 3 },
                     3: { "Fire Keese Wing": 8, "Sunshroom": 5 },
-                    4: { "Red Lizalfos Tail": 10, "Ruby": 5 },
+                    4: { "Red Lizalfos Tail": 10, "Ruby": 5 }
                 }
             },
             {
@@ -482,7 +482,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Red Chuchu Jelly": 3 },
                     2: { "Red Chuchu Jelly": 5, "Warm Safflina": 3 },
                     3: { "Fire Keese Wing": 8, "Sunshroom": 5 },
-                    4: { "Red Lizalfos Tail": 10, "Ruby": 5 },
+                    4: { "Red Lizalfos Tail": 10, "Ruby": 5 }
                 }
             },
         ]
@@ -499,7 +499,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Chuchu Jelly": 5, "Bokoblin Guts": 3 },
                     2: { "Keese Eyeball": 3, "Moblin Guts": 3 },
                     3: { "Lizalfos Tail": 2, "Hinox Guts": 2 },
-                    4: { "Lynel Hoof": 2, "Lynel Guts": 2 },
+                    4: { "Lynel Hoof": 2, "Lynel Guts": 2 }
                 }
             },
             {
@@ -509,7 +509,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Chuchu Jelly": 5, "Bokoblin Guts": 3 },
                     2: { "Keese Eyeball": 3, "Moblin Guts": 3 },
                     3: { "Lizalfos Tail": 2, "Hinox Guts": 2 },
-                    4: { "Lynel Hoof": 2, "Lynel Guts": 2 },
+                    4: { "Lynel Hoof": 2, "Lynel Guts": 2 }
                 }
             },
             {
@@ -520,7 +520,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Chuchu Jelly": 5, "Bokoblin Guts": 3 },
                     2: { "Keese Eyeball": 3, "Moblin Guts": 3 },
                     3: { "Lizalfos Tail": 2, "Hinox Guts": 2 },
-                    4: { "Lynel Hoof": 2, "Lynel Guts": 2 },
+                    4: { "Lynel Hoof": 2, "Lynel Guts": 2 }
                 }
             },
         ]
@@ -538,7 +538,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Lizalfos Horn": 3 },
                     2: { "Lizalfos Talon": 5, "Hyrule Bass": 5 },
                     3: { "Lizalfos Tail": 5, "Hearty Bass": 5 },
-                    4: { "Lizalfos Tail": 10, "Opal": 15 },
+                    4: { "Lizalfos Tail": 10, "Opal": 15 }
                 }
             },
             {
@@ -548,7 +548,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Lizalfos Horn": 3 },
                     2: { "Lizalfos Talon": 5, "Hyrule Bass": 5 },
                     3: { "Lizalfos Tail": 5, "Hearty Bass": 5 },
-                    4: { "Lizalfos Tail": 10, "Opal": 15 },
+                    4: { "Lizalfos Tail": 10, "Opal": 15 }
                 }
             },
             {
@@ -558,7 +558,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Lizalfos Horn": 3 },
                     2: { "Lizalfos Talon": 5, "Hyrule Bass": 5 },
                     3: { "Lizalfos Tail": 5, "Hearty Bass": 5 },
-                    4: { "Lizalfos Tail": 10, "Opal": 15 },
+                    4: { "Lizalfos Tail": 10, "Opal": 15 }
                 }
             },
         ]
@@ -576,7 +576,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Silent Princess": 3 },
                     2: { "Silent Princess": 3, "Shard of Farosh’s Horn": 2 },
                     3: { "Silent Princess": 3, "Shard of Naydra’s Horn": 2 },
-                    4: { "Silent Princess": 10, "Shard of Dinraal’s Horn": 2 },
+                    4: { "Silent Princess": 10, "Shard of Dinraal’s Horn": 2 }
                 }
             },
             {
@@ -588,7 +588,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Molduga Fin": 5, "Hightail Lizard": 10 },
                     2: { "Molduga Fin": 10, "Swift Carrot": 10 },
                     3: { "Molduga Guts": 2, "Rushroom": 15 },
-                    4: { "Molduga Guts": 4, "Swift Violet": 15 },
+                    4: { "Molduga Guts": 4, "Swift Violet": 15 }
                 }
             },
             {
@@ -600,7 +600,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Octorok Tentacle": 5, "Hightail Lizard": 10 },
                     2: { "Octo Balloon": 5, "Swift Carrot": 10 },
                     3: { "Octorok Eyeball": 5, "Rushroom": 15 },
-                    4: { "Naydra’s Scale": 2, "Swift Violet": 15 },
+                    4: { "Naydra’s Scale": 2, "Swift Violet": 15 }
                 }
             },
             {
@@ -613,9 +613,9 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                 Equip: "Body",
                 Name: "Warm Doublet",
                 Bonus: "Cold Resistance Up",
-                Description: "This piece of clothing is obtained in the tutorial portion of the game. Read the book in the Old Man’s cabin and make him a meal with Hyrule Bass and Spicy Peppers. If you climb to Mount Hylia without it, he’ll give it to you once you reach the top.",
+                Description: "This piece of clothing is obtained in the tutorial portion of the game. Read the book in the Old Man’s cabin and make him a meal with Hyrule Bass and Spicy Peppers. If you climb to Mount Hylia without it, he’ll give it to you once you reach the top."
             },
-        ],
+        ]
     },
     {
         Name: "Jewelry",
@@ -630,7 +630,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Amber": 5, "Flint": 3 },
                     2: { "Amber": 10, "Flint": 3 },
                     3: { "Amber": 20, "Flint": 3 },
-                    4: { "Amber": 30, "Flint": 3 },
+                    4: { "Amber": 30, "Flint": 3 }
                 }
             },
             {
@@ -640,8 +640,8 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Diamond": 2, "Flint": 3 },
                     2: { "Diamond": 4, "Flint": 3 },
                     3: { "Diamond": 6, "Star Fragment": 1 },
-                    4: { "Diamond": 10, "Star Fragment": 1 },
-                },
+                    4: { "Diamond": 10, "Star Fragment": 1 }
+                }
             },
             {
                 Name: "Opal Earrings", Equip: "Head", Bonus: "Swim Speed Up",
@@ -650,8 +650,8 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Opal": 5, "Flint": 3 },
                     2: { "Opal": 8, "Flint": 3 },
                     3: { "Opal": 16, "Star Fragment": 1 },
-                    4: { "Opal": 20, "Star Fragment": 1 },
-                },
+                    4: { "Opal": 20, "Star Fragment": 1 }
+                }
             },
             {
                 Name: "Ruby Circlet", Equip: "Head", Bonus: "Cold Resistance Up",
@@ -660,7 +660,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Ruby": 2, "Flint": 3 },
                     2: { "Ruby": 4, "Flint": 3 },
                     3: { "Ruby": 6, "Star Fragment": 1 },
-                    4: { "Ruby": 10, "Star Fragment": 1 },
+                    4: { "Ruby": 10, "Star Fragment": 1 }
                 }
             },
             {
@@ -670,7 +670,7 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Sapphire": 2, "Flint": 3 },
                     2: { "Sapphire": 4, "Flint": 3 },
                     3: { "Sapphire": 6, "Star Fragment": 1 },
-                    4: { "Sapphire": 10, "Star Fragment": 1 },
+                    4: { "Sapphire": 10, "Star Fragment": 1 }
                 }
             },
             {
@@ -680,10 +680,10 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Topaz": 2, "Flint": 3 },
                     2: { "Topaz": 4, "Flint": 3 },
                     3: { "Topaz": 6, "Star Fragment": 1 },
-                    4: { "Topaz": 10, "Star Fragment": 1 },
-                },
+                    4: { "Topaz": 10, "Star Fragment": 1 }
+                }
             },
-        ],
+        ]
     },
     {
         Name: "Kilton Masks",
@@ -691,21 +691,21 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
         Items: [
             {
                 Name: "Bokoblin Mask", Equip: "Head", Bonus: "Blend with Bokoblins",
-                Cost: { "Mon": 99 },
+                Cost: { "Mon": 99 }
             },
             {
                 Name: "Lizalfos Mask", Equip: "Head", Bonus: "Blend with Lizalfos",
-                Cost: { "Mon": 299, "Divine Beasts": 2 },
+                Cost: { "Mon": 299, "Divine Beasts": 2 }
             },
             {
                 Name: "Lynel Mask", Equip: "Head", Bonus: "Blend with Lynels",
-                Cost: { "Mon": 999, "Divine Beasts": 3 },
+                Cost: { "Mon": 999, "Divine Beasts": 3 }
             },
             {
                 Name: "Moblin Mask", Equip: "Head", Bonus: "Blend with Mobins",
-                Cost: { "Mon": 199, "Divine Beasts": 1 },
+                Cost: { "Mon": 199, "Divine Beasts": 1 }
             }
-        ],
+        ]
     },
     {
         Name: "Champion Helments",
@@ -720,8 +720,8 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Ancient Screw": 5, "Ancient Spring": 5 },
                     2: { "Ancient Spring": 15, "Ancient Gear": 10 },
                     3: { "Ancient Shaft": 15, "Ancient Core": 5 },
-                    4: { "Star Fragment": 1, "Giant Ancient Core": 2 },
-                },
+                    4: { "Star Fragment": 1, "Giant Ancient Core": 2 }
+                }
             },
             {
                 Name: "Vah Rudania Divine Helm",
@@ -731,8 +731,8 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Ancient Screw": 5, "Ancient Spring": 5 },
                     2: { "Ancient Spring": 15, "Ancient Gear": 10 },
                     3: { "Ancient Shaft": 15, "Ancient Core": 5 },
-                    4: { "Star Fragment": 1, "Giant Ancient Core": 2 },
-                },
+                    4: { "Star Fragment": 1, "Giant Ancient Core": 2 }
+                }
             },
             {
                 Name: "Vah Medoh Divine Helm",
@@ -742,8 +742,8 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Ancient Screw": 5, "Ancient Spring": 5 },
                     2: { "Ancient Spring": 15, "Ancient Gear": 10 },
                     3: { "Ancient Shaft": 15, "Ancient Core": 5 },
-                    4: { "Star Fragment": 1, "Giant Ancient Core": 2 },
-                },
+                    4: { "Star Fragment": 1, "Giant Ancient Core": 2 }
+                }
             },
             {
                 Name: "Vah Naboris Divine Helm",
@@ -753,8 +753,8 @@ Alternately, the set can be purchased from Grante in Tarrey Town.",
                     1: { "Ancient Screw": 5, "Ancient Spring": 5 },
                     2: { "Ancient Spring": 15, "Ancient Gear": 10 },
                     3: { "Ancient Shaft": 15, "Ancient Core": 5 },
-                    4: { "Star Fragment": 1, "Giant Ancient Core": 2 },
-                },
+                    4: { "Star Fragment": 1, "Giant Ancient Core": 2 }
+                }
             }
         ]
     }
@@ -857,4 +857,3 @@ function clickAll() {
     }
 }
 window.addEventListener("load", fn);
-//# sourceMappingURL=script.js.map

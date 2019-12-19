@@ -43,15 +43,15 @@ type plant_resource = "Acorn" | "Voltfruit" | "Courser Bee Honey" | "Swift Carro
 	"Silent Princess" | "Swift Violet" | "Warm Safflina" |
 	"Sunset Firefly" | "Hot-Footed Frog" | "Sneaky River Snail" | "Hightail Lizard" | "Fireproof Lizard" |
 	"Smotherwing Butterfly" | "Energetic Rhino Beetle";
-type other_resource = "Star Fragment" | "Rupees" | "Mon" | "Divine Beasts" | "?" | "??";
+type other_resource = "Star Fragment" | "Rupees" | "Mon" | "Divine Beasts";
 
 var Sets: set[] = [
 	{
-		"Name": "Faries",
-		"Description": "Faries",
+		"Name": "Fairies",
+		"Description": "Fairies",
 		"Items": [
 			{
-				Name: "Faries",
+				Name: "Fairies",
 				"Equip": "N/A",
 				"Upgrade Requirements": {
 					1: { Rupees: 100 },
