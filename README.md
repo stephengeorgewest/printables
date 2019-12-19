@@ -8,3 +8,5 @@ Things that can be printed
 [ProjectSheet](https://stephengeorgewest.github.io/printables/ProjectSheet/)
 
 [Kerbol System](./KerbolSystem.svg)
+
+[Botw Upgrade List](./BOTW_Upgrade_CheckList)
