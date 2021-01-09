@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+	"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd"> 
+<svg onload="init(evt)" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+		  onmousemove="mouseMove(evt)" onmouseover="mouseOver(evt)"  > 
+	<!--
+	http://www.w3.org/TR/SVG/interact.html
+	http://www.w3.org/TR/SVG/Overview.html
+	http://www.w3.org/TR/SVG/coords.html#InterfaceSVGPoint
+	
+	http://www.carto.net/svg/manipulating_svg_with_dom_ecmascript/
+	http://www.gamedev.net/page/resources/_/reference/programming/sweet-snippets/coordinates-in-hexagon-based-tile-maps-r1800
+		-->
+	
+ 
+	<script type="text/ecmascript"  xlink:href="script.js" /> 
+	
+	<!-- Pattern Definition http://apike.ca/prog_svg_jsanim.html--> 
+	<defs> 
+		<pattern id="checkerPattern" patternUnits="userSpaceOnUse"
+				x="0" y="0" width="10" height="10"
+				viewBox="0 0 10 10" > 
+				
+			<rect x="0" y="0" width="5" height="5" fill="lightblue" /> 
+			<rect x="5" y="5" width="5" height="5" fill="lightblue" /> 
+		</pattern> 
+	</defs>
+	
+	<!-- Background --> 
+	<!--<rect x="0" y="0" width="100%" height="100%" fill="url(#checkerPattern)" /> -->
+ 
+	<!-- Javascript Example --> 
+ 
+	<!--<circle cx="50%" cy="25%" r="40" fill="lightyellow" stroke-width="1" stroke="black" onclick="msClick()" onmousemove="msClick()" /> -->
+	
+	<!--<rect x="5" y="95" width="95%" height="95" fill="white" stroke="grey" stroke-width="2" rx="10" ry="10" opacity="0.5" /> 
+	<g id="arr_text" transform="translate(10,110)" >
+		<text x="0" y="0" id="txt_arr_0">Arr_text</text>  
+		
+	</g>
+		<text x="10" y="20" 
+id="vectorText">{"x":0,"y":0}a</text>-->
+	<g id="firstGroup"></g>
+</svg>
