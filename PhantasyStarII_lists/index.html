@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="script.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="content">
+			<select id="characterSelect" onchange="setCharacter(value)">
+				<option></option>
+			</select>
+			<select id="maxLocationSelect" onchange="setMaxLocation(value)"><option></option></select>
+			<div id="locationCheckboxes">
+			</div>
+			<table id="weaponTable">
+				<caption>Weapons</caption>
+				<thead><tr>
+					<th> </th>
+					<th>MST</th>
+					<th>Location</th>
+					<th>Attack</th>
+					<th>Defense</th>
+					<th>Usable by</th>
+				</tr></thead>
+				<tbody id="weaponTableBody"></tbody>
+			</table>
+			<table id="headgearTable">
+				<caption>Headgear</caption>
+				<thead><tr>
+					<th> </th>
+					<th>MST</th>
+					<th>Location</th>
+					<th>Defense</th>
+					<th>Technique</th>
+					<th>Usable by</th>
+				</tr></thead>
+				<tbody id="headgearTableBody"></tbody>
+			</table>
+			<table id="bodyArmorTable">
+				<caption>Armor</caption>
+				<thead><tr>
+					<th> </th>
+					<th>MST</th>
+					<th>Location</th>
+					<th>Defense</th>
+					<th>Technique</th>
+					<th>Usable by</th>
+				</tr></thead>
+				<tbody id="bodyArmorTableBody"></tbody>
+			</table>
+			<table id="shieldsTable">
+				<caption>Shields</caption>
+				<thead><tr>
+					<th> </th>
+					<th>MST</th>
+					<th>Location</th>
+					<th>Defense</th>
+					<th>Usable by</th>
+				</tr></thead>
+				<tbody id="shieldsTableBody"></tbody>
+			</table>
+			<table id="footwearTable">
+				<caption>Footwear</caption>
+				<thead><tr>
+					<th> </th>
+					<th>MST</th>
+					<th>Location</th>
+					<th>Defense</th>
+					<th>Agility</th>
+					<th>Attack</th>
+					<th>Usable by</th>
+				</tr></thead>
+				<tbody id="footwearTableBody"></tbody>
+			</table>
+		</div>
+	</body>
+</html>

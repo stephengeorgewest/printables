@@ -7,6 +7,8 @@ Things that can be printed
 
 [ProjectSheet](https://stephengeorgewest.github.io/printables/ProjectSheet/)
 
-[Kerbol System](./KerbolSystem.svg)
+[Kerbol System](https://stephengeorgewest.github.io/printables/KerbolSystem.svg)
 
-[Botw Upgrade List](./BOTW_Upgrade_CheckList)
+[Botw Upgrade List](https://stephengeorgewest.github.io/printables/BOTW_Upgrade_CheckList)
+
+[Phantasy Star II Items](https://stephengeorgewest.github.io/printables/PhantasyStarII_lists)

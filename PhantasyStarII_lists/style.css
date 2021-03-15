@@ -1,0 +1,60 @@
+
+:root {
+	--primary-color: rgb(228, 228, 228);
+	--secondary-color: dimgray;
+    --font-color: #424242;
+    --bg-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary-color: #222;
+		--secondary-color: dimgray;
+		--font-color: #ffffff;
+		--bg-color:#2c2c2c;
+	}
+  }
+html{
+	background-color: var(--bg-color);
+	color: var(--font-color);
+}
+h4 {
+	margin-bottom: 0em;
+}
+#content, html, body {
+	height: 100%;
+	margin: 0.3em;
+}
+table{
+	margin-top:1em;
+	border-collapse: collapse;
+}
+table tr{
+	border: 1px dashed var(--secondary-color);
+}
+thead > tr >th {
+	text-align: center;
+}
+tbody > tr > th {
+	text-align: right;
+}
+td {
+	margin: 0.1em;
+	padding: 0.1em;
+	text-align: center;
+}
+table tr:nth-child(2n){
+	background-color: var(--primary-color);
+}
+td[numeric]{
+	text-align: right;
+}
+table td:first-child{
+	width: 8em;
+}
+table td:nth-child(2){
+	width: 3em;
+}
+table td:nth-child(3){
+	width: 15em;
+}
