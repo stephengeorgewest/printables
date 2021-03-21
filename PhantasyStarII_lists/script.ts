@@ -23,9 +23,10 @@ type location =
 	"Shure" | "Tower of Nido" | "Biosystems Lab" | "Roron" | "Uzo Island" | "Climatrol" | "Control Tower" |
 	"Red Dam" | "Yellow Dam" | "Blue Dam" | "Green Dam" | "Gaira" | "Skure" | "Crevice" | "Menobe" | "Guaron" | "Ikuto" | "Naval" | "Noah";
 const locations: location[] = [
-	"Paseo", "Arima", "Oputa", "Zema", "Kueri", "Piata", "Zosa", "Aukba", "Ryuon", "Esper Mansion",
-	"Shure", "Tower of Nido", "Biosystems Lab", "Roron", "Uzo Island", "Climatrol", "Control Tower",
-	"Red Dam", "Yellow Dam", "Blue Dam", "Green Dam", "Gaira", "Skure", "Crevice", "Menobe", "Guaron", "Ikuto", "Naval", "Noah"
+	"Paseo", "Arima", "Shure", "Tower of Nido", "Oputa", "Biosystems Lab", "Zema", "Roron", "Kueri", "Piata",
+	"Uzo Island", "Climatrol", "Control Tower",
+	"Red Dam", "Yellow Dam", "Blue Dam", "Green Dam",
+	"Gaira", "Skure", "Zosa", "Aukba", "Ryuon", "Esper Mansion", "Crevice", "Menobe", "Guaron", "Ikuto", "Naval", "Noah"
 ];
 type item = {
 	name: string,

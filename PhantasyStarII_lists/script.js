@@ -9,9 +9,10 @@ const characters = [
     "Shir",
 ];
 const locations = [
-    "Paseo", "Arima", "Oputa", "Zema", "Kueri", "Piata", "Zosa", "Aukba", "Ryuon", "Esper Mansion",
-    "Shure", "Tower of Nido", "Biosystems Lab", "Roron", "Uzo Island", "Climatrol", "Control Tower",
-    "Red Dam", "Yellow Dam", "Blue Dam", "Green Dam", "Gaira", "Skure", "Crevice", "Menobe", "Guaron", "Ikuto", "Naval", "Noah"
+    "Paseo", "Arima", "Shure", "Tower of Nido", "Oputa", "Biosystems Lab", "Zema", "Roron", "Kueri", "Piata",
+    "Uzo Island", "Climatrol", "Control Tower",
+    "Red Dam", "Yellow Dam", "Blue Dam", "Green Dam",
+    "Gaira", "Skure", "Zosa", "Aukba", "Ryuon", "Esper Mansion", "Crevice", "Menobe", "Guaron", "Ikuto", "Naval", "Noah"
 ];
 const knives = [
     { name: "Laconian Dagger", MST: 18400, location: ["Ryuon", "Ikuto"], attack: 4, defense: 22, character: ["Shir"] },
