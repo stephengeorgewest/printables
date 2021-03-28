@@ -1,0 +1,66 @@
+
+:root {
+	--primary-color: rgb(228, 228, 228);
+	--secondary-color: dimgray;
+    --font-color: #424242;
+    --bg-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary-color: #222;
+		--secondary-color: dimgray;
+		--font-color: #ffffff;
+		--bg-color:#2c2c2c;
+	}
+  }
+html{
+	background-color: var(--bg-color);
+	color: var(--font-color);
+}
+#content, html, body {
+	height: 100%;
+	margin: 0.3em;
+}
+table{
+	margin-top:1em;
+	border-collapse: collapse;
+}
+table tr:nth-child(2n+1){
+	border-top: 1px solid var(--secondary-color);
+}
+table tr:nth-child(2n){
+	border-bottom: 1px solid var(--secondary-color);
+	background-color: var(--primary-color);
+}
+table tr:nth-child(2n+1) td, tr:nth-child(2n-1) th{
+	border-left: 1px solid var(--secondary-color);
+	border-right: 1px solid var(--secondary-color);
+	border-bottom: 1px dashed var(--secondary-color);
+	text-align: center;
+}
+tr:nth-child(2n) td:nth-child(3n-1), tr:nth-child(2n) th:nth-child(3n-1){
+	border-left: 1px solid var(--secondary-color);
+	border-right: 1px dashed var(--secondary-color);
+	min-width: 5em;
+}
+tr:nth-child(2n) td:nth-child(3n), tr:nth-child(2n) th:nth-child(3n){
+	min-width: 5em;
+}
+tr:nth-child(2n) td:nth-child(3n+1), tr:nth-child(2n) th:nth-child(3n+1){
+	border-left: 1px dashed var(--secondary-color);
+	border-right: 1px solid var(--secondary-color);
+	min-width: 5em;
+}
+
+thead > tr > th {
+	text-align: center;
+}
+tbody > tr > th {
+	padding-right:0.2em;
+}
+td {
+	margin: 0.2em;
+	padding: 0.2em;
+	text-align: left;
+}
