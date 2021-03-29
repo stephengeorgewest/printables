@@ -391,29 +391,36 @@ const log: {
 		]
 	}
 }
-const width = 10;
-function fn() {
+
+function makeTable(width: number) {
 	const thead = document.getElementById("thead");
 
 	const tr_date = document.createElement("tr");
 	const tr_data = document.createElement("tr");
+	while (thead.firstChild) {
+        thead.removeChild(thead.firstChild);
+    }
+
 	makeHeaderColumn(tr_date, tr_data,
 		"#",
 		"Brand",
 		"Type"
 	);
 	for (let i = 0; i < width; i++) {
-		makeColumn("td", tr_date, tr_data,
-			"Date",
-			"V0",
-			"mAh",
-			"mΩ"
+		makeColumn("th", tr_date, tr_data,
+			"DATE",
+			0,
+			0,
+			0
 		);
 	}
 	thead.append(tr_date);
 	thead.append(tr_data);
 
 	const tbody = document.getElementById("tbody");
+	while (tbody.firstChild) {
+        tbody.removeChild(tbody.firstChild);
+    }
 	Object.entries(log).forEach(([key, value]) => {
 		const tr_date = document.createElement("tr");
 		const tr_data = document.createElement("tr");
@@ -423,15 +430,16 @@ function fn() {
 			value.type
 		);
 
-		for (let i = value.log.length; i < width; i++) {
-			value.log.push({});
+		const entryLog = [... value.log];
+		for (let i = entryLog.length; i < width; i++) {
+			entryLog.push({});
 		}
-		value.log.forEach(l => {
+		entryLog.forEach(l => {
 			makeColumn("td", tr_date, tr_data,
-				l.date as string || "",
-				"V: " + (l.v as string || ""),
-				"mAh: " + (l.mAh as string || ""),
-				"mΩ: " + (l.mΩ as string || "")
+				l.date,
+				l.v,
+				l.mAh,
+				l.mΩ
 			);
 		});
 
@@ -445,7 +453,7 @@ function makeHeaderColumn(
 	numberText: string,
 	brandText: string,
 	typeText: string
-){
+) {
 	const th = document.createElement("th");
 	th.innerText = numberText;
 	th.rowSpan = 2;
@@ -461,26 +469,35 @@ function makeColumn(
 	type: "th" | "td",
 	tr_date: HTMLTableRowElement,
 	tr_data: HTMLTableRowElement,
-	dateText: string,
-	vText: string,
-	mAhText: string,
-	mΩText: string
-){
+	dateText: Date | string,
+	vText: number | "?",
+	mAhText: number | "?",
+	mΩText: number | "?"
+) {
 	const td_date = document.createElement(type);
 	td_date.colSpan = 3;
-	td_date.innerText = dateText;
+	td_date.innerText = dateText as string || "";
 	tr_date.appendChild(td_date);
 
 	const td_v = document.createElement(type);
-	td_v.innerText = vText;
+	td_v.innerHTML = "V<sub>0</sub>" + (type === "td" ? ": " + (vText || "") : "");
 	tr_data.appendChild(td_v);
 
 	const td_mAh = document.createElement(type);
-	td_mAh.innerText = mAhText;
+	td_mAh.innerText = "mAh" + (type === "td" ? ": " + (mAhText || "") : "");
 	tr_data.appendChild(td_mAh);
 
 	const td_mΩ = document.createElement(type);
-	td_mΩ.innerText = mΩText;
+	td_mΩ.innerText = "mΩ" + (type === "td" ? ": " + (mΩText || "") : "");
 	tr_data.appendChild(td_mΩ);
+}
+function fn() {
+	const select = document.getElementById("select") as HTMLInputElement;
+	select.addEventListener("change", (e) => makeTable(((e as any as InputEvent).target as HTMLInputElement).value as any as number));
+	makeTable(select.value as any as number);
+}
+function makeTable_1(e){
+	makeTable(e.target.value);
+	console.log(e.target.value);
 }
 window.addEventListener("load", fn);

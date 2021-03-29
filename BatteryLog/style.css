@@ -13,7 +13,10 @@
 		--font-color: #ffffff;
 		--bg-color:#2c2c2c;
 	}
-  }
+}
+@media print {
+	select {display: none;}
+}
 html{
 	background-color: var(--bg-color);
 	color: var(--font-color);
@@ -42,7 +45,7 @@ table tr:nth-child(2n+1) td, tr:nth-child(2n-1) th{
 tr:nth-child(2n) td:nth-child(3n-1), tr:nth-child(2n) th:nth-child(3n-1){
 	border-left: 1px solid var(--secondary-color);
 	border-right: 1px dashed var(--secondary-color);
-	min-width: 5em;
+	min-width: 3.5em;
 }
 tr:nth-child(2n) td:nth-child(3n), tr:nth-child(2n) th:nth-child(3n){
 	min-width: 5em;
@@ -50,7 +53,7 @@ tr:nth-child(2n) td:nth-child(3n), tr:nth-child(2n) th:nth-child(3n){
 tr:nth-child(2n) td:nth-child(3n+1), tr:nth-child(2n) th:nth-child(3n+1){
 	border-left: 1px dashed var(--secondary-color);
 	border-right: 1px solid var(--secondary-color);
-	min-width: 5em;
+	min-width: 4.2em;
 }
 
 thead > tr > th {
