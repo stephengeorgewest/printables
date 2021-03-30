@@ -1,20 +1,22 @@
+type logEntry = {
+	brand?: "Enegyzer" | "duraCell" | "Eneloop";
+	type?: "NiMH";
+	size?: "AAAA" | "AAA" | "AA" | "A" | "B" | "C" | "D";
+	group?: "A" | "B" | "C" | "D";
+	log?: Array<{
+		date?: Date | string;
+		v?: number | "?";
+		mAh?: number | "?";
+		mΩ?: number | "?";
+		note?: string;
+	}>
+};
 const log: {
-	[key: number]: {
-		brand: "Enegyzer" | "duraCell" | "Eneloop";
-		type: "NiMH";
-		group?: "A" | "B" | "C" | "D";
-		log: Array<{
-			date?: Date | string;
-			v?: number | "?";
-			mAh?: number | "?";
-			mΩ?: number | "?";
-			note?: string;
-		}>
-	}
+	[key: number]: logEntry
 } = {
 	1: {
 		brand: "Enegyzer",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-12T18:14:54",
 			v: 0,
@@ -35,7 +37,7 @@ const log: {
 	},
 	2: {
 		brand: "duraCell",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-12T18:14:54",
 			v: "?",
@@ -46,7 +48,7 @@ const log: {
 	},
 	3: {
 		brand: "duraCell",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-12T18:14:54",
 			v: "?",
@@ -57,7 +59,7 @@ const log: {
 	},
 	4: {
 		brand: "Enegyzer",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-12T18:14:54",
 			mAh: 1150,
@@ -67,7 +69,7 @@ const log: {
 	},
 	5: {
 		brand: "Enegyzer",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-12T18:14:54",
 			mAh: 1397,
@@ -77,7 +79,7 @@ const log: {
 	},
 	6: {
 		brand: "Enegyzer",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-12T18:14:54",
 			mAh: 1435,
@@ -91,7 +93,7 @@ const log: {
 	},
 	7: {
 		brand: "duraCell",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-13T18:14:54",
 			v: "?",
@@ -102,7 +104,7 @@ const log: {
 	},
 	8: {
 		brand: "Enegyzer",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-13T18:14:54",
 			mAh: 2063,
@@ -112,7 +114,7 @@ const log: {
 	},
 	9: {
 		brand: "Enegyzer",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-13T18:14:54",
 			mAh: 341,
@@ -122,7 +124,7 @@ const log: {
 	},
 	10: {
 		brand: "duraCell",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-13T18:14:54",
 			v: "?",
@@ -133,7 +135,7 @@ const log: {
 	},
 	11: {
 		brand: "duraCell",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-13T18:14:54",
 			v: "?",
@@ -144,7 +146,7 @@ const log: {
 	},
 	12: {
 		brand: "duraCell",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-13T18:14:54",
 			v: 0.5,
@@ -155,7 +157,7 @@ const log: {
 	},
 	13: {
 		brand: "Enegyzer",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-13T18:14:54",
 			mAh: 1978,
@@ -165,7 +167,7 @@ const log: {
 	},
 	14: {
 		brand: "Enegyzer",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-13T6:14:54",
 			v: 0,
@@ -181,7 +183,7 @@ const log: {
 	},
 	15: {
 		brand: "duraCell",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-13T18:14:54",
 			v: "?",
@@ -192,7 +194,7 @@ const log: {
 	},
 	16: {
 		brand: "Enegyzer",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			v: 0,
 			date: "2021-01-13T18:14:54",
@@ -208,7 +210,7 @@ const log: {
 	},
 	17: {
 		brand: "duraCell",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-14T8:14:54",
 			v: 1.29,
@@ -219,7 +221,7 @@ const log: {
 	},
 	18: {
 		brand: "Enegyzer",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-14T8:14:54",
 			v: 0.58,
@@ -230,7 +232,7 @@ const log: {
 	},
 	19: {
 		brand: "Enegyzer",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-14T8:14:54",
 			v: 0.8,
@@ -246,7 +248,7 @@ const log: {
 	},
 	20: {
 		brand: "Enegyzer",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		log: [{
 			date: "2021-01-14T15:14:54",
 			v: 0.8,
@@ -262,7 +264,7 @@ const log: {
 	},
 	21: {
 		brand: "Eneloop",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		group: "A",
 		log: [{
 			date: "2021-01-19T15:09:54",
@@ -275,7 +277,7 @@ const log: {
 	},
 	22: {
 		brand: "Eneloop",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		group: "A",
 		log: [{
 			date: "2021-01-19T15:09:54",
@@ -288,7 +290,7 @@ const log: {
 	},
 	23: {
 		brand: "Eneloop",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		group: "A",
 		log: [{
 			date: "2021-01-19T15:09:54",
@@ -301,7 +303,7 @@ const log: {
 	},
 	24: {
 		brand: "Eneloop",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		group: "A",
 		log: [{
 			date: "2021-01-19T15:09:54",
@@ -314,7 +316,7 @@ const log: {
 	},
 	25: {
 		brand: "Eneloop",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		group: "B",
 		log: [{
 			date: "2021-15-19T15:09:00",
@@ -327,7 +329,7 @@ const log: {
 	},
 	26: {
 		brand: "Eneloop",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		group: "B",
 		log: [{
 			date: "2021-15-19T15:09:00",
@@ -340,7 +342,7 @@ const log: {
 	},
 	27: {
 		brand: "Eneloop",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		group: "C",
 		log: [{
 			date: "2021-16-19T15:06:54",
@@ -353,7 +355,7 @@ const log: {
 	},
 	28: {
 		brand: "Eneloop",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		group: "C",
 		log: [{
 			date: "2021-16-19T15:06:54",
@@ -366,7 +368,7 @@ const log: {
 	},
 	29: {
 		brand: "Eneloop",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		group: "D",
 		log: [{
 			date: "2021-16-19T15:06:54",
@@ -379,7 +381,7 @@ const log: {
 	},
 	30: {
 		brand: "Eneloop",
-		type: "NiMH",
+		type: "NiMH", size: "AA",
 		group: "D",
 		log: [{
 			date: "2021-16-19T15:06:54",
@@ -392,19 +394,20 @@ const log: {
 	}
 }
 
-function makeTable(width: number) {
+function makeTable(width: number, height: number, start: number, count: number) {
+	const end = start + count;
 	const thead = document.getElementById("thead");
 
 	const tr_date = document.createElement("tr");
 	const tr_data = document.createElement("tr");
 	while (thead.firstChild) {
-        thead.removeChild(thead.firstChild);
-    }
+		thead.removeChild(thead.firstChild);
+	}
 
 	makeHeaderColumn(tr_date, tr_data,
 		"#",
 		"Brand",
-		"Type"
+		"Size"
 	);
 	for (let i = 0; i < width; i++) {
 		makeColumn("th", tr_date, tr_data,
@@ -419,33 +422,48 @@ function makeTable(width: number) {
 
 	const tbody = document.getElementById("tbody");
 	while (tbody.firstChild) {
-        tbody.removeChild(tbody.firstChild);
-    }
+		tbody.removeChild(tbody.firstChild);
+	}
 	Object.entries(log).forEach(([key, value]) => {
-		const tr_date = document.createElement("tr");
-		const tr_data = document.createElement("tr");
-		makeHeaderColumn(tr_date, tr_data,
-			key + (value.group || ""),
-			value.brand,
-			value.type
-		);
-
-		const entryLog = [... value.log];
-		for (let i = entryLog.length; i < width; i++) {
-			entryLog.push({});
-		}
-		entryLog.forEach(l => {
-			makeColumn("td", tr_date, tr_data,
-				l.date,
-				l.v,
-				l.mAh,
-				l.mΩ
-			);
-		});
-
-		tbody.append(tr_date);
-		tbody.append(tr_data);
+		const i = parseInt(key);
+		if(start <= i && i < end)
+			makeRow(tbody, key, value, width)
 	});
+
+	while ((tbody.childElementCount / 2) < count) {
+		makeRow(tbody, (tbody.childElementCount / 2) + start, {
+			log: []
+		}, width)
+	}
+}
+function makeRow(
+	tbody: HTMLElement,
+	key: string | number, value: logEntry, width
+) {
+
+	const tr_date = document.createElement("tr");
+	const tr_data = document.createElement("tr");
+	makeHeaderColumn(tr_date, tr_data,
+		key + (value.group || ""),
+		value.brand || " ",
+		value.size || " "
+	);
+
+	const entryLog = [...value.log];
+	for (let i = entryLog.length; i < width; i++) {
+		entryLog.push({});
+	}
+	entryLog.forEach(l => {
+		makeColumn("td", tr_date, tr_data,
+			l.date,
+			l.v,
+			l.mAh,
+			l.mΩ
+		);
+	});
+
+	tbody.append(tr_date);
+	tbody.append(tr_data);
 }
 function makeHeaderColumn(
 	tr_date: HTMLTableRowElement,
@@ -491,13 +509,35 @@ function makeColumn(
 	td_mΩ.innerText = "mΩ" + (type === "td" ? ": " + (mΩText || "") : "");
 	tr_data.appendChild(td_mΩ);
 }
+let tableWidth: number;
+let tableHeight: number; /* printing tables across multiple pages is still wonky 😒*/
+let tableStart: number;
+let tableCount: number;
 function fn() {
-	const select = document.getElementById("select") as HTMLInputElement;
-	select.addEventListener("change", (e) => makeTable(((e as any as InputEvent).target as HTMLInputElement).value as any as number));
-	makeTable(select.value as any as number);
-}
-function makeTable_1(e){
-	makeTable(e.target.value);
-	console.log(e.target.value);
+	const selectWidth = document.getElementById("selectWidth") as HTMLInputElement;
+	tableWidth = parseInt(selectWidth.value);
+	selectWidth.addEventListener("change", (e) => {
+		tableWidth = parseInt(((e as any as InputEvent).target as HTMLInputElement).value);
+		makeTable(tableWidth, tableHeight, tableStart, tableCount);
+	});
+	/*const selectHeight = document.getElementById("selectHeight") as HTMLInputElement;
+	tableHeight = parseInt(selectHeight.value);
+	selectHeight.addEventListener("change", (e) => {
+		tableHeight = parseInt(((e as any as InputEvent).target as HTMLInputElement).value);
+		makeTable(tableWidth, tableHeight, tableStart, tableCount);
+	});*/
+	const selectStart = document.getElementById("selectStart") as HTMLInputElement;
+	tableStart = parseInt(selectStart.value);
+	selectStart.addEventListener("change", (e) => {
+		tableStart = parseInt(((e as any as InputEvent).target as HTMLInputElement).value);
+		makeTable(tableWidth, tableHeight, tableStart, tableCount);
+	});
+	const selectCount = document.getElementById("selectCount") as HTMLInputElement;
+	tableCount = parseInt(selectCount.value);
+	selectCount.addEventListener("change", (e) => {
+		tableCount = parseInt(((e as any as InputEvent).target as HTMLInputElement).value);
+		makeTable(tableWidth, tableHeight, tableStart, tableCount);
+	});
+	makeTable(tableWidth, tableHeight, tableStart, tableCount);
 }
 window.addEventListener("load", fn);

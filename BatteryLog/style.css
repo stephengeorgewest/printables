@@ -15,7 +15,7 @@
 	}
 }
 @media print {
-	select {display: none;}
+	div#options {display: none;}
 }
 html{
 	background-color: var(--bg-color);
@@ -29,27 +29,39 @@ table{
 	margin-top:1em;
 	border-collapse: collapse;
 }
+/*TopRow*/
 table tr:nth-child(2n+1){
 	border-top: 1px solid var(--secondary-color);
 }
+/*#*/
+table tr:nth-child(2n+1) > th:first-of-type{
+	min-width: 2em;
+	border-bottom: 1px solid var(--secondary-color);
+}
+/*BottomRow*/
 table tr:nth-child(2n){
 	border-bottom: 1px solid var(--secondary-color);
 	background-color: var(--primary-color);
+	page-break-after: avoid;
 }
+/*Date*/
 table tr:nth-child(2n+1) td, tr:nth-child(2n-1) th{
 	border-left: 1px solid var(--secondary-color);
 	border-right: 1px solid var(--secondary-color);
 	border-bottom: 1px dashed var(--secondary-color);
 	text-align: center;
 }
+/*V0*/
 tr:nth-child(2n) td:nth-child(3n-1), tr:nth-child(2n) th:nth-child(3n-1){
 	border-left: 1px solid var(--secondary-color);
 	border-right: 1px dashed var(--secondary-color);
 	min-width: 3.5em;
 }
+/*mAh*/
 tr:nth-child(2n) td:nth-child(3n), tr:nth-child(2n) th:nth-child(3n){
 	min-width: 5em;
 }
+/*mΩ*/
 tr:nth-child(2n) td:nth-child(3n+1), tr:nth-child(2n) th:nth-child(3n+1){
 	border-left: 1px dashed var(--secondary-color);
 	border-right: 1px solid var(--secondary-color);
@@ -60,7 +72,9 @@ thead > tr > th {
 	text-align: center;
 }
 tbody > tr > th {
+	height: 22px;
 	padding-right:0.2em;
+	page-break-inside: avoid;
 }
 td {
 	margin: 0.2em;

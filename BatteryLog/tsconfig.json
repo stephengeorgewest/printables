@@ -3,6 +3,7 @@
 		"target": "es2019",
 		"module": "commonjs",
 		"sourceMap": true,
-		"watch": true
+		"watch": true,
+        "emitBOM": true,
 	}
 }
