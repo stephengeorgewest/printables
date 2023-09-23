@@ -12,3 +12,5 @@ Things that can be printed
 [Botw Upgrade List](https://stephengeorgewest.github.io/printables/BOTW_Upgrade_CheckList)
 
 [Phantasy Star II Items](https://stephengeorgewest.github.io/printables/PhantasyStarII_lists)
+
+[trichotometric](https://stephengeorgewest.github.io/printables/trichotometric)
